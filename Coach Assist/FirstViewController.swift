@@ -29,7 +29,7 @@ class FirstViewController: UIViewController {
         label2.hidden = true
         label3.hidden = true
         label4.hidden = true
-        changePicture("http://icons.wxug.com/i/c/c/clear.gif")
+        
         if let zip = prefs.stringForKey("zipcode"){
             let hour = prefs.stringForKey("hour")!
             if Int(hour) >= 12{
@@ -66,6 +66,22 @@ class FirstViewController: UIViewController {
                         self.label2.text = String("\(weatherData["temp"]["english"]) Degrees Fahrenheit")
                         self.label3.text = String("\(weatherData["condition"])")
                         self.label4.text = String("Wind Speed: \(weatherData["wspd"]["english"]) MPH")
+                        switch String(weatherData["fctcode"]){
+                        case "1", "7":
+                            self.weatherImage.image = UIImage(named: "sun")
+                        case "2", "3":
+                            self.weatherImage.image = UIImage(named: "partly")
+                        case "4", "5", "6":
+                            self.weatherImage.image = UIImage(named: "cloudy")
+                        case "8", "9", "16", "18", "19", "20", "21", "22", "23", "24":
+                            self.weatherImage.image = UIImage(named: "snow")
+                        case "10", "11", "12", "13":
+                            self.weatherImage.image = UIImage(named: "rain")
+                        case "14", "15":
+                            self.weatherImage.image = UIImage(named: "lightning")
+                        default:
+                            break
+                        }
                         
                     }
                 case .Failure(let error):
