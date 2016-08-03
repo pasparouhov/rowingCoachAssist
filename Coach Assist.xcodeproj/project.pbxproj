@@ -20,6 +20,7 @@
 		2CEF359E1D51222C00C5D47F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; };
 		2CEF35A11D51225D00C5D47F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		771FF5741E7BA6D1C40B0668 /* Pods_Coach_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,9 @@
 		2CEF35961D5120D500C5D47F /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2CEF35991D51222200C5D47F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		2CEF359A1D51222200C5D47F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.release.xcconfig"; sourceTree = "<group>"; };
+		D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.debug.xcconfig"; sourceTree = "<group>"; };
+		DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coach_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			files = (
 				2CEF359B1D51222200C5D47F /* Realm.framework in Frameworks */,
 				2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */,
+				771FF5741E7BA6D1C40B0668 /* Pods_Coach_Assist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,7 @@
 				2CEF35981D51222200C5D47F /* Frameworks */,
 				2CEF357D1D510B5400C5D47F /* Coach Assist */,
 				2CEF357C1D510B5400C5D47F /* Products */,
+				B32A4F78FF6B60A4602A8936 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +111,18 @@
 			children = (
 				2CEF35991D51222200C5D47F /* Realm.framework */,
 				2CEF359A1D51222200C5D47F /* RealmSwift.framework */,
+				DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B32A4F78FF6B60A4602A8936 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */,
+				5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,10 +132,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CEF358F1D510B5400C5D47F /* Build configuration list for PBXNativeTarget "Coach Assist" */;
 			buildPhases = (
+				49E5330490D8B10AD430BB27 /* [CP] Check Pods Manifest.lock */,
 				2CEF35771D510B5400C5D47F /* Sources */,
 				2CEF35781D510B5400C5D47F /* Frameworks */,
 				2CEF35791D510B5400C5D47F /* Resources */,
 				2CEF359F1D51222C00C5D47F /* Embed Frameworks */,
+				3107A96F981629B1ED3F36B3 /* [CP] Embed Pods Frameworks */,
+				FC8206EC0DA1CBE4358A617C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +194,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3107A96F981629B1ED3F36B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E5330490D8B10AD430BB27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8206EC0DA1CBE4358A617C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CEF35771D510B5400C5D47F /* Sources */ = {
@@ -297,6 +364,7 @@
 		};
 		2CEF35901D510B5400C5D47F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -312,6 +380,7 @@
 		};
 		2CEF35911D510B5400C5D47F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

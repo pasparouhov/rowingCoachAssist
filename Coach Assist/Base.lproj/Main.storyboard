@@ -141,10 +141,10 @@
                             <constraint firstItem="y0I-Mo-ZuQ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.27" id="Rmm-D3-Yab"/>
                             <constraint firstItem="Umc-9b-buD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="SPn-nM-lNo"/>
                             <constraint firstItem="p96-11-RV8" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Tjs-XT-V8M"/>
-                            <constraint firstItem="iOo-ub-eHn" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.25" id="V5k-XU-mcV"/>
+                            <constraint firstItem="iOo-ub-eHn" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="V5k-XU-mcV"/>
                             <constraint firstItem="Umc-9b-buD" firstAttribute="top" secondItem="wEh-lK-pnS" secondAttribute="bottom" constant="8" id="WWB-nn-tpi"/>
                             <constraint firstItem="TZm-hr-MxV" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.25" id="YIi-G3-2TZ"/>
-                            <constraint firstItem="wEh-lK-pnS" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.25" id="Z2N-7o-dR4"/>
+                            <constraint firstItem="wEh-lK-pnS" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Z2N-7o-dR4"/>
                             <constraint firstItem="y0I-Mo-ZuQ" firstAttribute="top" secondItem="FGi-fe-HYi" secondAttribute="bottom" constant="8" id="a9z-jC-mjb"/>
                             <constraint firstItem="iOo-ub-eHn" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="d12-iX-GOZ"/>
                             <constraint firstItem="FGi-fe-HYi" firstAttribute="top" secondItem="p96-11-RV8" secondAttribute="bottom" constant="8" id="dxy-2S-9qP"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="FGi-fe-HYi" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.25" id="oUe-dV-HjF"/>
                             <constraint firstItem="Cg4-NO-82n" firstAttribute="top" secondItem="Jz5-c7-Ktx" secondAttribute="bottom" constant="10" id="oWL-4m-1rg"/>
                             <constraint firstItem="p96-11-RV8" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.33" id="pnb-hT-KIc"/>
-                            <constraint firstItem="Umc-9b-buD" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.25" id="po8-ZY-2TG"/>
+                            <constraint firstItem="Umc-9b-buD" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="po8-ZY-2TG"/>
                             <constraint firstItem="4Vp-MA-Eto" firstAttribute="top" secondItem="TZm-hr-MxV" secondAttribute="bottom" constant="10" id="rBw-pG-c0T"/>
                             <constraint firstItem="bLy-YZ-3O4" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="rRQ-Zc-fHM"/>
                             <constraint firstItem="iOo-ub-eHn" firstAttribute="top" secondItem="Umc-9b-buD" secondAttribute="bottom" constant="8" id="sQ2-VJ-iX2"/>
@@ -177,6 +177,7 @@
                         <outlet property="label3" destination="Umc-9b-buD" id="k9s-Bq-Nhs"/>
                         <outlet property="label4" destination="iOo-ub-eHn" id="0es-5g-Qwq"/>
                         <outlet property="practiceTime" destination="Jz5-c7-Ktx" id="Buz-6n-GuQ"/>
+                        <outlet property="weatherImage" destination="TZm-hr-MxV" id="2O2-8m-Dlv"/>
                         <outlet property="zipCode" destination="y0I-Mo-ZuQ" id="Uks-Tm-TCA"/>
                     </connections>
                 </viewController>
