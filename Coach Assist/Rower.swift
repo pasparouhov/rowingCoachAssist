@@ -20,4 +20,5 @@ class Rower: Object {
     dynamic var customLength2 = ""
     dynamic var customData1 = ""
     dynamic var customData2 = ""
+    dynamic var gender = ""
 }

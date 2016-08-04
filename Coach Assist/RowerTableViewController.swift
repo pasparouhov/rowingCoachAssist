@@ -45,8 +45,8 @@ class RowerTableViewController: UITableViewController {
         let rower = rowers[indexPath.row]
         // 3
         cell.nameLabel.text = rower.name
-        cell.weightLabel.text = rower.weight
-        cell.K2.text = rower.k2
+        cell.weightLabel.text = "\(rower.weight) lbs"
+        cell.K2.text = "2k: \(rower.k2)"
 
         // Configure the cell...
 

@@ -151,7 +151,7 @@
                             <constraint firstItem="4Vp-MA-Eto" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Aee-rJ-JpL"/>
                             <constraint firstItem="Jz5-c7-Ktx" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.9" id="EUz-FN-cYu"/>
                             <constraint firstItem="TZm-hr-MxV" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="FaP-z7-Mny"/>
-                            <constraint firstItem="Jz5-c7-Ktx" firstAttribute="top" secondItem="bLy-YZ-3O4" secondAttribute="bottom" constant="-15" id="GjC-pv-64A"/>
+                            <constraint firstItem="Jz5-c7-Ktx" firstAttribute="top" secondItem="bLy-YZ-3O4" secondAttribute="bottom" constant="10" id="GjC-pv-64A"/>
                             <constraint firstItem="wEh-lK-pnS" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="K1e-A0-OzC"/>
                             <constraint firstItem="Cg4-NO-82n" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="KMT-Ap-oL6"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="p96-11-RV8" secondAttribute="bottom" multiplier="1.25" id="MUw-9d-EaX"/>
@@ -222,9 +222,9 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pavel Asparouhov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI5-rK-tcy">
                                             <rect key="frame" x="8" y="8" width="228" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="23" id="XQv-9H-qkw"/>
+                                                <constraint firstAttribute="height" constant="27" id="XQv-9H-qkw"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -303,7 +303,7 @@
                                     <constraint firstAttribute="height" constant="30" id="V8W-ic-IYs"/>
                                     <constraint firstAttribute="width" constant="97" id="Wag-vs-oH3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -319,19 +319,31 @@
                                 <rect key="frame" x="70" y="49" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZXl-wi-4bQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="eSq-Wb-XFz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZXl-wi-4bQ"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiH-t7-UXw" userLabel="Weight Label">
                                 <rect key="frame" x="20" y="49" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="5o5-gO-yBO"/>
                                     <constraint firstAttribute="height" constant="30" id="bds-jP-Axb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="mrG-Bx-C9H"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mrG-Bx-C9H"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2K time here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d8c-mh-yqD" userLabel="2K Text Field">
                                 <rect key="frame" x="70" y="87" width="97" height="30"/>
@@ -339,7 +351,7 @@
                                     <constraint firstAttribute="height" constant="30" id="2lG-GM-XxW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2K:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0n-MZ-pDS" userLabel="2K Label">
                                 <rect key="frame" x="20" y="87" width="42" height="21"/>
@@ -347,7 +359,7 @@
                                     <constraint firstAttribute="width" constant="97" id="fdL-51-dkN"/>
                                     <constraint firstAttribute="height" constant="30" id="lEU-ZE-uuE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -357,25 +369,15 @@
                                     <constraint firstAttribute="height" constant="30" id="sMS-jF-iaJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5K:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-pV-wGW" userLabel="5K Label">
-                                <rect key="frame" x="20" y="125" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="elw-fm-WVM"/>
-                                    <constraint firstAttribute="width" constant="97" id="iRA-RW-nX1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6K time here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wy1-4b-lox" userLabel="6K Text Field">
                                 <rect key="frame" x="70" y="163" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="McP-Dw-iq5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6K:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi3-Bp-zQt" userLabel="6K Label">
                                 <rect key="frame" x="20" y="163" width="42" height="21"/>
@@ -383,7 +385,7 @@
                                     <constraint firstAttribute="height" constant="30" id="YkR-6x-JER"/>
                                     <constraint firstAttribute="width" constant="97" id="ucw-Qr-nam"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -393,7 +395,7 @@
                                     <constraint firstAttribute="height" constant="30" id="DLB-SB-Fa3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10K:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-Y0-FP7" userLabel="10K Label">
                                 <rect key="frame" x="20" y="201" width="42" height="21"/>
@@ -401,7 +403,7 @@
                                     <constraint firstAttribute="height" constant="30" id="07G-yb-SKi"/>
                                     <constraint firstAttribute="width" constant="97" id="d0V-FN-VX2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -429,7 +431,7 @@
                                     <constraint firstAttribute="height" constant="30" id="5ii-v2-9YH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom Data Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-h5-zAa" userLabel="Input Time 2 Text Field">
                                 <rect key="frame" x="105" y="277" width="97" height="30"/>
@@ -437,17 +439,29 @@
                                     <constraint firstAttribute="height" constant="30" id="myQ-xb-Xj8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5K:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-pV-wGW" userLabel="5K Label">
+                                <rect key="frame" x="20" y="125" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="elw-fm-WVM"/>
+                                    <constraint firstAttribute="width" constant="97" id="iRA-RW-nX1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YFp-Y0-FP7" firstAttribute="top" secondItem="vi3-Bp-zQt" secondAttribute="bottom" constant="8" id="0g8-Kj-iqw"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="0v1-cA-sHx"/>
                             <constraint firstItem="rGm-rb-YFL" firstAttribute="top" secondItem="zS0-pV-wGW" secondAttribute="top" id="1Sz-aH-CON"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vi3-Bp-zQt" secondAttribute="leading" constant="8" id="2ok-2a-j6V"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="leading" secondItem="DiH-t7-UXw" secondAttribute="trailing" id="30L-09-BIw"/>
                             <constraint firstItem="1zH-OG-eHS" firstAttribute="top" secondItem="DiH-t7-UXw" secondAttribute="top" id="3x3-7v-9DP"/>
                             <constraint firstItem="vi3-Bp-zQt" firstAttribute="top" secondItem="zS0-pV-wGW" secondAttribute="bottom" constant="8" id="4Gi-Gf-dig"/>
-                            <constraint firstItem="ZMu-fb-g45" firstAttribute="top" secondItem="gTf-HV-jHK" secondAttribute="bottom" id="4yn-Ca-f2h"/>
+                            <constraint firstItem="ZMu-fb-g45" firstAttribute="top" secondItem="gTf-HV-jHK" secondAttribute="bottom" constant="8" id="4yn-Ca-f2h"/>
                             <constraint firstItem="6SP-h5-zAa" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="5cC-QV-vrh"/>
                             <constraint firstItem="j0n-MZ-pDS" firstAttribute="top" secondItem="DiH-t7-UXw" secondAttribute="bottom" constant="8" id="7He-Tk-QTv"/>
                             <constraint firstItem="rGm-rb-YFL" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="82B-3h-ufN"/>
@@ -456,9 +470,11 @@
                             <constraint firstItem="pHU-n0-Rs7" firstAttribute="leading" secondItem="YCd-ra-vXt" secondAttribute="trailing" constant="6" id="FDU-K3-IG4"/>
                             <constraint firstItem="Wy1-4b-lox" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="FsP-zZ-kAJ"/>
                             <constraint firstItem="DiH-t7-UXw" firstAttribute="top" secondItem="ZMu-fb-g45" secondAttribute="bottom" constant="8" id="Gmj-LP-gfV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DiH-t7-UXw" secondAttribute="leading" constant="8" id="Gp5-Cl-eFz"/>
                             <constraint firstItem="1zH-OG-eHS" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="IWu-UA-3ZN"/>
                             <constraint firstItem="ASy-Ve-4hA" firstAttribute="leading" secondItem="yax-es-a6y" secondAttribute="leadingMargin" constant="-15" id="Kw0-BJ-K4e"/>
                             <constraint firstItem="K8p-MU-Sri" firstAttribute="top" secondItem="YFp-Y0-FP7" secondAttribute="top" id="Miq-3c-jM0"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="top" secondItem="DiH-t7-UXw" secondAttribute="top" id="MrB-kU-LSQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="YFp-Y0-FP7" secondAttribute="leading" constant="8" id="NYG-17-GHE"/>
                             <constraint firstItem="6SP-h5-zAa" firstAttribute="top" secondItem="ASy-Ve-4hA" secondAttribute="top" id="OPK-Kt-bod"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IcK-kQ-G2p" secondAttribute="trailing" constant="30" id="RZ0-ga-hV2"/>
@@ -467,12 +483,15 @@
                             <constraint firstItem="pHU-n0-Rs7" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="W8t-IG-Qib"/>
                             <constraint firstItem="IcK-kQ-G2p" firstAttribute="top" secondItem="ZMu-fb-g45" secondAttribute="top" id="Xhx-KF-W4U"/>
                             <constraint firstItem="IcK-kQ-G2p" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="Z1s-O4-3ho"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="leading" secondItem="IcK-kQ-G2p" secondAttribute="trailing" constant="8" id="cCc-m6-gLV"/>
                             <constraint firstItem="6SP-h5-zAa" firstAttribute="leading" secondItem="ASy-Ve-4hA" secondAttribute="trailing" constant="6" id="chz-8W-RRc"/>
                             <constraint firstItem="K8p-MU-Sri" firstAttribute="width" secondItem="yax-es-a6y" secondAttribute="width" constant="-120" id="d3N-lh-raR"/>
                             <constraint firstItem="ASy-Ve-4hA" firstAttribute="top" secondItem="YCd-ra-vXt" secondAttribute="bottom" constant="8" id="d7S-Xd-Z7d"/>
                             <constraint firstItem="d8c-mh-yqD" firstAttribute="leading" secondItem="j0n-MZ-pDS" secondAttribute="trailing" id="drh-XE-jQX"/>
                             <constraint firstItem="pHU-n0-Rs7" firstAttribute="top" secondItem="YCd-ra-vXt" secondAttribute="bottom" constant="30" id="eCe-nm-F29"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="leading" secondItem="DiH-t7-UXw" secondAttribute="trailing" constant="3" id="gLf-Eg-Zfo"/>
                             <constraint firstItem="IcK-kQ-G2p" firstAttribute="leading" secondItem="ZMu-fb-g45" secondAttribute="trailing" id="i49-cD-LNA"/>
+                            <constraint firstItem="1zH-OG-eHS" firstAttribute="leading" secondItem="yax-es-a6y" secondAttribute="leadingMargin" id="ise-4p-FBD"/>
                             <constraint firstItem="IcK-kQ-G2p" firstAttribute="width" secondItem="ZMu-fb-g45" secondAttribute="width" id="jws-KL-o8r"/>
                             <constraint firstItem="K8p-MU-Sri" firstAttribute="leading" secondItem="YFp-Y0-FP7" secondAttribute="trailing" id="kog-NJ-cso"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ZMu-fb-g45" secondAttribute="leading" constant="8" id="lEN-TS-rHX"/>
@@ -491,8 +510,15 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="lEN-TS-rHX"/>
+                                <exclude reference="Vga-fd-u2o"/>
                                 <exclude reference="RZ0-ga-hV2"/>
                                 <exclude reference="jws-KL-o8r"/>
+                                <exclude reference="3x3-7v-9DP"/>
+                                <exclude reference="DNk-dS-81a"/>
+                                <exclude reference="IWu-UA-3ZN"/>
+                                <exclude reference="cCc-m6-gLV"/>
+                                <exclude reference="gLf-Eg-Zfo"/>
+                                <exclude reference="ise-4p-FBD"/>
                                 <exclude reference="upq-ED-0pA"/>
                                 <exclude reference="eCe-nm-F29"/>
                             </mask>

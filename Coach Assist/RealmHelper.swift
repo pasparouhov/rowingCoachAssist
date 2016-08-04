@@ -24,7 +24,7 @@ class RealmHelper {
     }
     static func retrieveRower() -> Results<Rower> {
         let realm = try! Realm()
-        return realm.objects(Rower).sorted("name", ascending: false)
+        return realm.objects(Rower).sorted("name", ascending: true)
     }
     static func updateRower(rowerToBeUpdated: Rower, newRower: Rower) {
         let realm = try! Realm()

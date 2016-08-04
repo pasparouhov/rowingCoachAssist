@@ -23,12 +23,14 @@ class DisplayRowerViewController: UIViewController {
     var rower: Rower?
     override func viewDidLoad(){
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DisplayRowerViewController.dismissKeyboard))
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let rowerTableViewController = segue.destinationViewController as! RowerTableViewController
         if segue.identifier == "Save" {
             // if note exists, update title and content
             if let rower = rower {
+                
                 // 1
                 let newRower = Rower()
                 newRower.name = nameTextField.text ?? ""
@@ -57,7 +59,9 @@ class DisplayRowerViewController: UIViewController {
                 rower.customData1 = customData1.text ?? ""
                 rower.customData2 = customData2.text ?? ""
                 // 2
-                RealmHelper.addRower(rower)
+                if rower.name != ""{
+                    RealmHelper.addRower(rower)
+                }
             }
             // 3
             rowerTableViewController.rowers = RealmHelper.retrieveRower()
@@ -90,6 +94,10 @@ class DisplayRowerViewController: UIViewController {
             customData1.text = ""
             customData2.text = ""
         }
+    }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
 }
