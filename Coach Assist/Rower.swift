@@ -13,4 +13,11 @@ class Rower: Object {
     dynamic var name = ""
     dynamic var weight = ""
     dynamic var k2 = ""
+    dynamic var k5 = ""
+    dynamic var k6 = ""
+    dynamic var k10 = ""
+    dynamic var customLength1 = ""
+    dynamic var customLength2 = ""
+    dynamic var customData1 = ""
+    dynamic var customData2 = ""
 }

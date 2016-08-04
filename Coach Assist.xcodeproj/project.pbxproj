@@ -11,7 +11,7 @@
 		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D541D53C46F008548C8 /* RealmHelper.swift */; };
-		2C232D571D53D027008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */; };
+		2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35821D510B5400C5D47F /* SecondViewController.swift */; };
@@ -47,7 +47,7 @@
 		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2C232D541D53C46F008548C8 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
+		2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -103,11 +103,11 @@
 				2CEF357E1D510B5400C5D47F /* AppDelegate.swift */,
 				2CEF35801D510B5400C5D47F /* FirstViewController.swift */,
 				2CEF35921D511F3D00C5D47F /* ThirdViewController.swift */,
+				2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */,
 				2CEF35941D511F6100C5D47F /* FourthViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
 				2C232D541D53C46F008548C8 /* RealmHelper.swift */,
-				2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
 				2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */,
 				2C232D4E1D53A167008548C8 /* Rower.swift */,
@@ -267,7 +267,7 @@
 				2CEF35931D511F3D00C5D47F /* ThirdViewController.swift in Sources */,
 				2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */,
 				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
-				2C232D571D53D027008548C8 /* DisplayRowerViewController.swift in Sources */,
+				2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
 				2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */,

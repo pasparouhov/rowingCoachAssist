@@ -32,6 +32,14 @@ class RealmHelper {
             rowerToBeUpdated.name = newRower.name
             rowerToBeUpdated.weight = newRower.weight
             rowerToBeUpdated.k2 = newRower.k2
+            rowerToBeUpdated.k5 = newRower.k5
+            rowerToBeUpdated.k6 = newRower.k6
+            rowerToBeUpdated.k10 = newRower.k10
+            rowerToBeUpdated.customLength1 = newRower.customLength1
+            rowerToBeUpdated.customLength2 = newRower.customLength2
+            rowerToBeUpdated.customData1 = newRower.customData1
+            rowerToBeUpdated.customData2 = newRower.customData2
         }
     }
+
 }

@@ -53,6 +53,43 @@ class RowerTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // 1
+        if let identifier = segue.identifier {
+            // 2
+            if identifier == "displayRower" {
+                // 1
+                let indexPath = tableView.indexPathForSelectedRow!
+                // 2
+                let rower = rowers[indexPath.row]
+                // 3
+                let displayRowerViewController = segue.destinationViewController as! DisplayRowerViewController
+                
+                // 4
+                displayRowerViewController.rower = rower
+                print("Transitioning to the Display Note View Controller")
+            } else if identifier == "addNote"{
+                print("+ button tapped")
+            }
+        }
+    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete {
+            //1
+            RealmHelper.deleteRower(rowers[indexPath.row])
+            //2
+            rowers = RealmHelper.retrieveRower()
+        }
+    }
+    @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
+
+
 
     /*
     // Override to support conditional editing of the table view.
