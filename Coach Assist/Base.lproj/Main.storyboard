@@ -263,7 +263,6 @@
                                     <outlet property="K2" destination="Ain-M6-Rfa" id="McF-bL-duA"/>
                                     <outlet property="nameLabel" destination="oI5-rK-tcy" id="V3l-T4-eMA"/>
                                     <outlet property="weightLabel" destination="tcJ-rn-BR4" id="Bq1-Hn-Jg1"/>
-                                    <segue destination="PY5-Cx-htv" kind="show" id="23l-k7-8DE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -279,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="1467" y="107"/>
         </scene>
-        <!--Rower-->
+        <!--Display Rower View Controller-->
         <scene sceneID="mwl-PL-Yc5">
             <objects>
                 <viewController id="PY5-Cx-htv" customClass="DisplayRowerViewController" sceneMemberID="viewController">
@@ -492,7 +491,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Rower" id="AMM-JQ-NLE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67o-y0-ph4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
