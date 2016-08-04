@@ -12,6 +12,7 @@ class RowerTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
 
+    @IBOutlet weak var K2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

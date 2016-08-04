@@ -7,25 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RowerTableViewController: UITableViewController {
-    var rowers = [Rower]()
+    var rowers: Results<Rower>! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleRowers()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        rowers = RealmHelper.retrieveRower()
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    func loadSampleRowers() {
-        let rower1 = Rower(name: "Ayy Lmao", weight: 300)!
-        let rower2 = Rower(name: "memer", weight: 200)!
-        rowers += [rower1, rower2]
-        
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,8 +43,10 @@ class RowerTableViewController: UITableViewController {
         
         //        let cellIdentifier = "RowerTableViewCell"
         let rower = rowers[indexPath.row]
+        // 3
         cell.nameLabel.text = rower.name
         cell.weightLabel.text = rower.weight
+        cell.K2.text = rower.k2
 
         // Configure the cell...
 

@@ -10,6 +10,8 @@
 		2C232D4F1D53A168008548C8 /* Rower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D4E1D53A167008548C8 /* Rower.swift */; };
 		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
+		2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D541D53C46F008548C8 /* RealmHelper.swift */; };
+		2C232D571D53D027008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35821D510B5400C5D47F /* SecondViewController.swift */; };
@@ -18,7 +20,6 @@
 		2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */; };
 		2CEF35931D511F3D00C5D47F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35921D511F3D00C5D47F /* ThirdViewController.swift */; };
 		2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35941D511F6100C5D47F /* FourthViewController.swift */; };
-		2CEF35971D5120D500C5D47F /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35961D5120D500C5D47F /* RealmHelper.swift */; };
 		2CEF359B1D51222200C5D47F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; };
 		2CEF359E1D51222C00C5D47F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; };
@@ -45,6 +46,8 @@
 		2C232D4E1D53A167008548C8 /* Rower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rower.swift; sourceTree = "<group>"; };
 		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
+		2C232D541D53C46F008548C8 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		2CEF358C1D510B5400C5D47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEF35921D511F3D00C5D47F /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		2CEF35941D511F6100C5D47F /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		2CEF35961D5120D500C5D47F /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2CEF35991D51222200C5D47F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		2CEF359A1D51222200C5D47F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,8 +105,9 @@
 				2CEF35921D511F3D00C5D47F /* ThirdViewController.swift */,
 				2CEF35941D511F6100C5D47F /* FourthViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
-				2CEF35961D5120D500C5D47F /* RealmHelper.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
+				2C232D541D53C46F008548C8 /* RealmHelper.swift */,
+				2C232D561D53D027008548C8 /* DisplayRowerViewController.swift */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
 				2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */,
 				2C232D4E1D53A167008548C8 /* Rower.swift */,
@@ -259,11 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */,
-				2CEF35971D5120D500C5D47F /* RealmHelper.swift in Sources */,
 				2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */,
 				2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */,
 				2CEF35931D511F3D00C5D47F /* ThirdViewController.swift in Sources */,
+				2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */,
 				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
+				2C232D571D53D027008548C8 /* DisplayRowerViewController.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
 				2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */,

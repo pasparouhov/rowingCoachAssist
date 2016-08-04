@@ -7,15 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Rower {
-    var name: String
-    var weight: String
-    init?(name: String, weight: Int){
-        self.name = name
-        self.weight = String(weight)
-        if name.isEmpty{
-            return nil
-        }
-    }
+class Rower: Object {
+    dynamic var name = ""
+    dynamic var weight = ""
+    dynamic var k2 = ""
 }
