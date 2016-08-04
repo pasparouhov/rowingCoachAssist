@@ -25,10 +25,13 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         label1.hidden = true
         label2.hidden = true
         label3.hidden = true
         label4.hidden = true
+        weatherImage.hidden = true
         
         if let zip = prefs.stringForKey("zipcode"){
             let hour = prefs.stringForKey("hour")!
@@ -93,6 +96,7 @@ class FirstViewController: UIViewController {
             label2.hidden = false
             label3.hidden = false
             label4.hidden = false
+            weatherImage.hidden = false
             //print("They practice at \(zip) and at \(prefs.stringForKey("hour")!) ")
         }
         
@@ -118,7 +122,7 @@ class FirstViewController: UIViewController {
         } else {
             viewDidLoad()
         }
-        
+        view.endEditing(true)
         
         viewDidLoad()
     }
@@ -126,6 +130,10 @@ class FirstViewController: UIViewController {
         let url = NSURL(string: url)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         weatherImage.image = UIImage(data: data!)
+    }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
 }

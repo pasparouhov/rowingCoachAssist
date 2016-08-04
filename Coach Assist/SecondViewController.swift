@@ -9,6 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var rowerTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

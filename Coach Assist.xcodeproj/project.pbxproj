@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C232D4F1D53A168008548C8 /* Rower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D4E1D53A167008548C8 /* Rower.swift */; };
+		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
+		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35821D510B5400C5D47F /* SecondViewController.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C232D4E1D53A167008548C8 /* Rower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rower.swift; sourceTree = "<group>"; };
+		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
+		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +104,10 @@
 				2CEF35941D511F6100C5D47F /* FourthViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
 				2CEF35961D5120D500C5D47F /* RealmHelper.swift */,
+				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
+				2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */,
+				2C232D4E1D53A167008548C8 /* Rower.swift */,
 				2CEF35871D510B5400C5D47F /* Assets.xcassets */,
 				2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */,
 				2CEF358C1D510B5400C5D47F /* Info.plist */,
@@ -161,6 +170,7 @@
 				TargetAttributes = {
 					2CEF357A1D510B5400C5D47F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KUPHH5NVNT;
 					};
 				};
 			};
@@ -251,7 +261,10 @@
 				2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */,
 				2CEF35971D5120D500C5D47F /* RealmHelper.swift in Sources */,
 				2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */,
+				2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */,
 				2CEF35931D511F3D00C5D47F /* ThirdViewController.swift in Sources */,
+				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
+				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
 				2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */,
 			);
@@ -367,6 +380,8 @@
 			baseConfigurationReference = D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -375,6 +390,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PavelAsparouhov.Coach-Assist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -383,6 +399,8 @@
 			baseConfigurationReference = 5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -391,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PavelAsparouhov.Coach-Assist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
