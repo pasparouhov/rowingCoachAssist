@@ -12,6 +12,7 @@
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D541D53C46F008548C8 /* RealmHelper.swift */; };
 		2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */; };
+		2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C232D5C1D540F64008548C8 /* Images.xcassets */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35821D510B5400C5D47F /* SecondViewController.swift */; };
@@ -48,6 +49,7 @@
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2C232D541D53C46F008548C8 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
+		2C232D5C1D540F64008548C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				2CEF35871D510B5400C5D47F /* Assets.xcassets */,
 				2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */,
 				2CEF358C1D510B5400C5D47F /* Info.plist */,
+				2C232D5C1D540F64008548C8 /* Images.xcassets */,
 			);
 			path = "Coach Assist";
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */,
+				2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */,
 				2CEF35881D510B5400C5D47F /* Assets.xcassets in Resources */,
 				2CEF35861D510B5400C5D47F /* Main.storyboard in Resources */,
 			);
@@ -384,6 +388,7 @@
 			baseConfigurationReference = D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -403,6 +408,7 @@
 			baseConfigurationReference = 5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
