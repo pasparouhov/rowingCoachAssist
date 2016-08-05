@@ -579,7 +579,7 @@
         <!--Third View-->
         <scene sceneID="kf9-HG-hm2">
             <objects>
-                <viewController title="Third View" id="L4y-XY-S7y" sceneMemberID="viewController">
+                <viewController title="Third View" id="L4y-XY-S7y" customClass="Tools" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8dg-so-QqF"/>
                         <viewControllerLayoutGuide type="bottom" id="83B-aM-bOx"/>
@@ -588,6 +588,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-dS-9dv">
+                                <rect key="frame" x="0.0" y="78" width="600" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="5nW-Zd-JdI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-aW-4GT">
                                 <rect key="frame" x="310" y="140" width="46" height="30"/>
                                 <constraints>
@@ -595,14 +605,9 @@
                                     <constraint firstAttribute="width" constant="46" id="CT2-ci-xbG"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geM-0F-Lra">
-                                <rect key="frame" x="244" y="140" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Aq4-VT-K0Q"/>
-                                    <constraint firstAttribute="width" constant="46" id="QLi-Eo-ECT"/>
-                                </constraints>
-                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="L4y-XY-S7y" eventType="touchUpInside" id="Hh6-qu-nBl"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Z-Br-7kI">
                                 <rect key="frame" x="-250" y="166" width="1100" height="64"/>
@@ -622,6 +627,9 @@
                                 <state key="normal" title="28 SPM">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="SPMPressed:" destination="L4y-XY-S7y" eventType="touchUpInside" id="ZLc-WK-eEQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Here Between Strokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-1p-EgE">
                                 <rect key="frame" x="0.0" y="240" width="600" height="21"/>
@@ -648,22 +656,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2:15 Min/500M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-AI-51d">
-                                <rect key="frame" x="279" y="459" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:15 Min/500M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-AI-51d">
+                                <rect key="frame" x="0.0" y="435" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="R53-aZ-g0h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-dS-9dv">
-                                <rect key="frame" x="0.0" y="78" width="600" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="5nW-Zd-JdI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -683,7 +681,6 @@
                             <constraint firstItem="2Zc-1p-EgE" firstAttribute="centerX" secondItem="d0G-3M-rR5" secondAttribute="centerX" id="QYH-0h-KCo"/>
                             <constraint firstItem="6zX-8w-ATO" firstAttribute="centerY" secondItem="d0G-3M-rR5" secondAttribute="centerY" multiplier="1.28" id="RaD-zR-iEw"/>
                             <constraint firstItem="tmO-tx-Kbd" firstAttribute="height" secondItem="d0G-3M-rR5" secondAttribute="height" multiplier="0.33" id="Umq-rt-3dQ"/>
-                            <constraint firstItem="geM-0F-Lra" firstAttribute="centerX" secondItem="d0G-3M-rR5" secondAttribute="centerX" constant="-33" id="WBT-W6-CW6"/>
                             <constraint firstItem="Q6Z-Br-7kI" firstAttribute="centerY" secondItem="d0G-3M-rR5" secondAttribute="centerY" multiplier="0.66" id="WUw-QQ-ra7"/>
                             <constraint firstItem="Q6Z-Br-7kI" firstAttribute="top" secondItem="8dg-so-QqF" secondAttribute="bottom" multiplier="5" id="WiQ-ST-uzG"/>
                             <constraint firstItem="nkM-dS-9dv" firstAttribute="top" secondItem="2u1-fY-R1V" secondAttribute="bottom" constant="20" id="c7m-cO-FGp"/>
@@ -694,7 +691,6 @@
                             <constraint firstItem="6zX-8w-ATO" firstAttribute="width" secondItem="d0G-3M-rR5" secondAttribute="width" constant="500" id="h4q-qC-oXj"/>
                             <constraint firstItem="wSC-AI-51d" firstAttribute="centerY" secondItem="d0G-3M-rR5" secondAttribute="centerY" multiplier="1.55" id="lbp-TN-CLJ"/>
                             <constraint firstItem="wSC-AI-51d" firstAttribute="width" secondItem="d0G-3M-rR5" secondAttribute="width" id="lnr-3N-kAb"/>
-                            <constraint firstItem="geM-0F-Lra" firstAttribute="top" secondItem="nkM-dS-9dv" secondAttribute="bottom" constant="20" id="sEd-lM-S9n"/>
                             <constraint firstItem="6zX-8w-ATO" firstAttribute="leading" secondItem="d0G-3M-rR5" secondAttribute="leadingMargin" constant="-170" id="vKQ-16-NqN"/>
                             <constraint firstItem="2Zc-1p-EgE" firstAttribute="width" secondItem="d0G-3M-rR5" secondAttribute="width" id="w9h-nh-qzq"/>
                         </constraints>
@@ -706,6 +702,12 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tools" image="strokes_per_minute-1" id="mWn-iB-eOG"/>
+                    <connections>
+                        <outlet property="SPMButton" destination="tmO-tx-Kbd" id="csy-uP-sZy"/>
+                        <outlet property="speed" destination="wSC-AI-51d" id="mBv-ZM-ctt"/>
+                        <outlet property="startButton" destination="8Mo-aW-4GT" id="NBE-bH-9Qc"/>
+                        <outlet property="timeLabel" destination="nkM-dS-9dv" id="DiC-HD-eua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApC-yc-gQ0" sceneMemberID="firstResponder"/>
             </objects>
