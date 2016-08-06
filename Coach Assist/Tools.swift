@@ -33,8 +33,8 @@ class Tools: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingHeading()
         locationManager.startUpdatingLocation()
-        let repeatingFunction = #selector(Tools.updateSpeed)
-        speedTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: repeatingFunction, userInfo: nil, repeats: true)
+        
+        
 
     }
 
@@ -116,16 +116,23 @@ class Tools: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         var speed1: CLLocationSpeed = CLLocationSpeed()
         if let speed1 = locationManager.location?.speed{
-            if speed1 > 0{
+            if speed1 > 1{
                 var split = 500 / speed1
                 var split1 = Int(split / 60)
                 var split2 = Int(split) - split1 * 60
                 let formattedSec = String(format: "%02d", split2)
-                speed.text = String("\(split1):\(formattedSec) M/500")
+                speed.text = String("\(split1):\(formattedSec) Min/500M")
             } else{
                 speed.text = String("Too slow, split N/A")
             }
         }
     }
     
+    @IBAction func endSplits(sender: AnyObject) {
+        speedTimer.invalidate()
+    }
+    @IBAction func startSplits(sender: AnyObject) {
+        let repeatingFunction = #selector(Tools.updateSpeed)
+        speedTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: repeatingFunction, userInfo: nil, repeats: true)
+    }
 }

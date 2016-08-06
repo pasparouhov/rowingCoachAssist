@@ -19,12 +19,12 @@
 		2CEF35861D510B5400C5D47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35841D510B5400C5D47F /* Main.storyboard */; };
 		2CEF35881D510B5400C5D47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35871D510B5400C5D47F /* Assets.xcassets */; };
 		2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */; };
-		2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35941D511F6100C5D47F /* FourthViewController.swift */; };
 		2CEF359B1D51222200C5D47F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; };
 		2CEF359E1D51222C00C5D47F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; };
 		2CEF35A11D51225D00C5D47F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E21D5516A30042EF8B /* Tools.swift */; };
+		2CF8E0E51D55505D0042EF8B /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */; };
 		771FF5741E7BA6D1C40B0668 /* Pods_Coach_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +58,10 @@
 		2CEF35871D510B5400C5D47F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CEF358A1D510B5400C5D47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CEF358C1D510B5400C5D47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CEF35941D511F6100C5D47F /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		2CEF35991D51222200C5D47F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		2CEF359A1D51222200C5D47F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		2CF8E0E21D5516A30042EF8B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.release.xcconfig"; sourceTree = "<group>"; };
 		D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.debug.xcconfig"; sourceTree = "<group>"; };
 		DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coach_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,9 +105,9 @@
 				2CEF357E1D510B5400C5D47F /* AppDelegate.swift */,
 				2CEF35801D510B5400C5D47F /* FirstViewController.swift */,
 				2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */,
-				2CEF35941D511F6100C5D47F /* FourthViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
 				2CF8E0E21D5516A30042EF8B /* Tools.swift */,
+				2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
 				2C232D541D53C46F008548C8 /* RealmHelper.swift */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
@@ -267,13 +267,13 @@
 			files = (
 				2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */,
 				2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */,
+				2CF8E0E51D55505D0042EF8B /* WorkoutViewController.swift in Sources */,
 				2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */,
 				2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */,
 				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
 				2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
-				2CEF35951D511F6100C5D47F /* FourthViewController.swift in Sources */,
 				2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
