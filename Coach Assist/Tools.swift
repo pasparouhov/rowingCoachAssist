@@ -13,6 +13,7 @@ class Tools: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var speed: UILabel!
     
+    @IBOutlet weak var last3: UILabel!
     @IBOutlet weak var SPMButton: UIButton!
     var timer = NSTimer()
     var SPMTimer = NSTimer()
@@ -105,6 +106,13 @@ class Tools: UIViewController, CLLocationManagerDelegate {
             var doubleTime = Double(time)
             var SPM = Double(6000 / time)
             SPMButton.setTitle("\(Int(SPM)) SPM", forState: UIControlState.Normal)
+            if strokeCounter.count >= 3 {
+                let time3 = ((Double(time) + Double((strokeCounter[stroke - 1]! - strokeCounter[stroke - 2]!))) / 2)
+                let spm3 = 6000 / time3
+                last3.text = ("Avg of Last 3: \(Int(spm3))")
+                
+                
+            }
         }
     }
     

@@ -15,11 +15,20 @@ class WorkoutViewController: UIViewController {
     
     
     @IBOutlet weak var shortLabel: UILabel!
+    @IBOutlet weak var mediumLabel: UILabel!
+    @IBOutlet weak var longLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shortLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         shortLabel.numberOfLines = 0
+        mediumLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        mediumLabel.numberOfLines = 0
+        longLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        longLabel.numberOfLines = 0
+        generateWorkouts()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +36,19 @@ class WorkoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func generateWorkouts(){
+        var short = Int(arc4random_uniform(UInt32(shortWorkouts.count)))
+        var medium = Int(arc4random_uniform(UInt32(mediumWorkouts.count)))
+        var large = Int(arc4random_uniform(UInt32(longWorkouts.count)))
+        shortLabel.text = shortWorkouts[short]
+        mediumLabel.text = mediumWorkouts[medium]
+        longLabel.text = longWorkouts[large]
+        
+    }
+    
+    @IBAction func refresh(sender: AnyObject) {
+        generateWorkouts()
+    }
     /*
     // MARK: - Navigation
 

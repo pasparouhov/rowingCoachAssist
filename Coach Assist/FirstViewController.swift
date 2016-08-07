@@ -20,7 +20,14 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label1: UILabel!
     let prefs = NSUserDefaults.standardUserDefaults()
+   
+    @IBOutlet weak var realPracticeLabel: UIButton!
+    @IBOutlet weak var practiceTimeLabel: UILabel!
 
+    @IBOutlet weak var enterButton: UIImageView!
+
+    @IBOutlet weak var editLocation: UIButton!
+    @IBOutlet weak var zipCodeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +39,17 @@ class FirstViewController: UIViewController {
         label3.hidden = true
         label4.hidden = true
         weatherImage.hidden = true
+        editLocation.hidden = true
+        realPracticeLabel.layer.cornerRadius = 5
+        if let _ = prefs.stringForKey("zipcode"){
+            zipCode.hidden = true
+            practiceTime.hidden = true
+            zipCodeLabel.hidden = true
+            practiceTimeLabel.hidden = true
+            realPracticeLabel.hidden = true
+            editLocation.hidden = false
+            
+        }
         
         if let zip = prefs.stringForKey("zipcode"){
             let hour = prefs.stringForKey("hour")!
@@ -59,33 +77,53 @@ class FirstViewController: UIViewController {
 //                        let currentHour = currentComponents.hour
 //                        print(currentHour)
                         let json = JSON(value)
-                        let stringURL = String(json["hourly_forecast"][0]["FCTTIME"]["hour"])
-                        let weatherHour = Int(stringURL)
-                        var arrayNumber = Int(hour)! - weatherHour!
-                        if arrayNumber < 0{
-                            arrayNumber = 0
+                        if json["hourly_forecast"][0]["FCTTIME"]["hour"] != nil{
+                            let stringURL = String(json["hourly_forecast"][0]["FCTTIME"]["hour"])
+                            let weatherHour = Int(stringURL)
+                            var arrayNumber = Int(hour)! - weatherHour!
+                            if arrayNumber < 0{
+                                arrayNumber = 0
+                            }
+                            let weatherData = json["hourly_forecast"][arrayNumber]
+                            self.label2.text = String("\(weatherData["temp"]["english"]) Degrees Fahrenheit")
+                            self.label3.text = String("\(weatherData["condition"])")
+                            self.label4.text = String("Wind Speed: \(weatherData["wspd"]["english"]) MPH")
+                            switch String(weatherData["fctcode"]){
+                            case "1", "7":
+                                self.weatherImage.image = UIImage(named: "sun")
+                            case "2", "3":
+                                self.weatherImage.image = UIImage(named: "partly")
+                            case "4", "5", "6":
+                                self.weatherImage.image = UIImage(named: "cloudy")
+                            case "8", "9", "16", "18", "19", "20", "21", "22", "23", "24":
+                                self.weatherImage.image = UIImage(named: "snow")
+                            case "10", "11", "12", "13":
+                                self.weatherImage.image = UIImage(named: "rain")
+                            case "14", "15":
+                                self.weatherImage.image = UIImage(named: "lightning")
+                            default:
+                                break
+                            }
+                        } else {
+                            self.zipCode.hidden = false
+                            self.practiceTime.hidden = false
+                            self.zipCodeLabel.hidden = false
+                            self.practiceTimeLabel.hidden = false
+                            self.realPracticeLabel.hidden = false
+                            self.editLocation.hidden = true
+                            self.label1.hidden = true
+                            self.label2.hidden = true
+                            self.label3.hidden = true
+                            self.label4.hidden = true
+                            self.weatherImage.hidden = true
+                            self.editLocation.hidden = true
+                            let alertController = UIAlertController(title: "Invalid Zip", message:
+                                "Please enter valid zip", preferredStyle: UIAlertControllerStyle.Alert)
+                            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                            
+                            self.presentViewController(alertController, animated: true, completion: nil)
+
                         }
-                        let weatherData = json["hourly_forecast"][arrayNumber]
-                        self.label2.text = String("\(weatherData["temp"]["english"]) Degrees Fahrenheit")
-                        self.label3.text = String("\(weatherData["condition"])")
-                        self.label4.text = String("Wind Speed: \(weatherData["wspd"]["english"]) MPH")
-                        switch String(weatherData["fctcode"]){
-                        case "1", "7":
-                            self.weatherImage.image = UIImage(named: "sun")
-                        case "2", "3":
-                            self.weatherImage.image = UIImage(named: "partly")
-                        case "4", "5", "6":
-                            self.weatherImage.image = UIImage(named: "cloudy")
-                        case "8", "9", "16", "18", "19", "20", "21", "22", "23", "24":
-                            self.weatherImage.image = UIImage(named: "snow")
-                        case "10", "11", "12", "13":
-                            self.weatherImage.image = UIImage(named: "rain")
-                        case "14", "15":
-                            self.weatherImage.image = UIImage(named: "lightning")
-                        default:
-                            break
-                        }
-                        
                     }
                 case .Failure(let error):
                     print(error)
@@ -97,6 +135,7 @@ class FirstViewController: UIViewController {
             label3.hidden = false
             label4.hidden = false
             weatherImage.hidden = false
+            
             //print("They practice at \(zip) and at \(prefs.stringForKey("hour")!) ")
         }
         
@@ -123,8 +162,17 @@ class FirstViewController: UIViewController {
             viewDidLoad()
         }
         view.endEditing(true)
-        
+        zipCode.hidden = true
+        practiceTime.hidden = true
+
+        zipCodeLabel.hidden = true
+        practiceTimeLabel.hidden = true
+        realPracticeLabel.hidden = true
+        editLocation.hidden = false
         viewDidLoad()
+    }
+    func hideButton() {
+        enterButton.hidden = true
     }
     func changePicture(url: String) {
         let url = NSURL(string: url)
@@ -136,5 +184,23 @@ class FirstViewController: UIViewController {
         view.endEditing(true)
     }
 
+    @IBAction func editLocation(sender: AnyObject) {
+        zipCode.hidden = false
+        practiceTime.hidden = false
+        zipCodeLabel.hidden = false
+        practiceTimeLabel.hidden = false
+        realPracticeLabel.hidden = false
+        editLocation.hidden = true
+        label1.hidden = true
+        label2.hidden = true
+        label3.hidden = true
+        label4.hidden = true
+        weatherImage.hidden = true
+        editLocation.hidden = true
+
+    }
+        
+
+    
 }
 
