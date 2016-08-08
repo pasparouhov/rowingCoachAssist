@@ -31,6 +31,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -122,6 +123,7 @@ class FirstViewController: UIViewController {
                             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
                             
                             self.presentViewController(alertController, animated: true, completion: nil)
+                            self.zipCode.text = self.prefs.stringForKey("zipcode")
 
                         }
                     }
@@ -197,6 +199,7 @@ class FirstViewController: UIViewController {
         label4.hidden = true
         weatherImage.hidden = true
         editLocation.hidden = true
+        zipCode.text = prefs.stringForKey("zipcode")
 
     }
         

@@ -9,4 +9,10 @@ pod 'SwiftyJSON'
 
   # Pods for Coach Assist
 
+  pod 'Bond', '4.0.0'
+  pod "ConvenienceKit"
+  pod 'Parse'
+  pod 'ParseFacebookUtilsV4'
+  pod 'ParseUI'
+
 end
