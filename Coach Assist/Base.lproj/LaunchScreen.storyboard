@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="App_Icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="GDG-Ef-95z">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="App_Icon_startup" translatesAutoresizingMaskIntoConstraints="NO" id="GDG-Ef-95z">
                                 <rect key="frame" x="0.0" y="0.0" width="575" height="592"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GDG-Ef-95z" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="9Wp-yU-1gl"/>
+                            <constraint firstItem="GDG-Ef-95z" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="EKV-KJ-4aX"/>
                             <constraint firstItem="GDG-Ef-95z" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="GRF-aF-grq"/>
+                            <constraint firstItem="GDG-Ef-95z" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="mgQ-a4-MQf"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="App_Icon-1" width="560" height="560"/>
+        <image name="App_Icon_startup" width="375" height="667"/>
     </resources>
 </document>

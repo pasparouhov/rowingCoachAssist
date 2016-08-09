@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class RowerTableViewController: UITableViewController {
-    var rowers: Results<Rower>! {
+    var rowers: Results<Rower1>! {
         didSet {
             tableView.reloadData()
         }

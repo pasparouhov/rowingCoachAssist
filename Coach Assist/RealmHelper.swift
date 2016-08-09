@@ -10,23 +10,23 @@ import Foundation
 import RealmSwift
 
 class RealmHelper {
-    static func addRower(rower: Rower) {
+    static func addRower(rower: Rower1) {
         let realm = try! Realm()
         try! realm.write() {
             realm.add(rower)
         }
     }
-    static func deleteRower(note: Rower) {
+    static func deleteRower(note: Rower1) {
         let realm = try! Realm()
         try! realm.write() {
             realm.delete(note)
         }
     }
-    static func retrieveRower() -> Results<Rower> {
+    static func retrieveRower() -> Results<Rower1> {
         let realm = try! Realm()
-        return realm.objects(Rower).sorted("name", ascending: true)
+        return realm.objects(Rower1).sorted("name", ascending: true)
     }
-    static func updateRower(rowerToBeUpdated: Rower, newRower: Rower) {
+    static func updateRower(rowerToBeUpdated: Rower1, newRower: Rower1) {
         let realm = try! Realm()
         try! realm.write() {
             rowerToBeUpdated.name = newRower.name

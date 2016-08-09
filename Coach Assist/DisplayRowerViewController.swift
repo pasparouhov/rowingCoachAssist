@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Parse
 class DisplayRowerViewController: UIViewController {
 
     @IBOutlet weak var customData2: UITextField!
@@ -20,7 +21,7 @@ class DisplayRowerViewController: UIViewController {
     @IBOutlet weak var k2TextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
-    var rower: Rower?
+    var rower: Rower1?
     override func viewDidLoad(){
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DisplayRowerViewController.dismissKeyboard))
@@ -32,7 +33,7 @@ class DisplayRowerViewController: UIViewController {
             if let rower = rower {
                 
                 // 1
-                let newRower = Rower()
+                let newRower = Rower1()
                 newRower.name = nameTextField.text ?? ""
                 newRower.weight = weightTextField.text ?? ""
                 newRower.k2 = k2TextField.text ?? ""
@@ -47,7 +48,7 @@ class DisplayRowerViewController: UIViewController {
                 RealmHelper.updateRower(rower, newRower: newRower)
             } else {
                 // if note does not exist, create new note
-                let rower = Rower()
+                let rower = Rower1()
                 rower.name = nameTextField.text ?? ""
                 rower.weight = weightTextField.text ?? ""
                 rower.k2 = k2TextField.text ?? ""
@@ -62,6 +63,20 @@ class DisplayRowerViewController: UIViewController {
                 if rower.name != ""{
                     RealmHelper.addRower(rower)
                 }
+                let rower1 = Rower()
+ 
+                rower1.rowerNameString = nameTextField.text ?? ""
+                rower1.weightString = weightTextField.text ?? ""
+                rower1.k2String = k2TextField.text ?? ""
+                rower1.k5String = k5TextField.text ?? ""
+                rower1.k6String = k6TextField.text ?? ""
+                rower1.k10String = k10TextField.text ?? ""
+                rower1.customLength1String = customLength1.text ?? ""
+                rower1.customLength2String = customLength2.text ?? ""
+                rower1.customData1String = customData1.text ?? ""
+                rower1.customData2String = customData2.text ?? ""
+                rower1.updateRower()
+                
             }
             // 3
             rowerTableViewController.rowers = RealmHelper.retrieveRower()

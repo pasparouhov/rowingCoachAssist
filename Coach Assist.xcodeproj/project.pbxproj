@@ -7,31 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C18F59F1D5A52B900E4F895 /* ParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F59E1D5A52B900E4F895 /* ParseTest.swift */; };
+		2C18F5AD1D5A73B000E4F895 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AC1D5A73B000E4F895 /* Realm.framework */; };
+		2C18F5AE1D5A73B000E4F895 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AC1D5A73B000E4F895 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C18F5B01D5A73B600E4F895 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */; };
+		2C18F5B11D5A73B600E4F895 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C232D4F1D53A168008548C8 /* Rower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D4E1D53A167008548C8 /* Rower.swift */; };
 		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D541D53C46F008548C8 /* RealmHelper.swift */; };
 		2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */; };
 		2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C232D5C1D540F64008548C8 /* Images.xcassets */; };
-		2CD555241D591743008CE2D8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD555231D591743008CE2D8 /* Alamofire.framework */; };
-		2CD555251D591743008CE2D8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD555231D591743008CE2D8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2CD5552A1D59175E008CE2D8 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD555271D59175E008CE2D8 /* ParseFacebookUtilsV4.framework */; };
-		2CD5552B1D59175E008CE2D8 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD555281D59175E008CE2D8 /* ParseUI.framework */; };
-		2CD5552D1D59176B008CE2D8 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD5552C1D59176B008CE2D8 /* Bond.framework */; };
-		2CD5552E1D59176B008CE2D8 /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD5552C1D59176B008CE2D8 /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35831D510B5400C5D47F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35821D510B5400C5D47F /* SecondViewController.swift */; };
 		2CEF35861D510B5400C5D47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35841D510B5400C5D47F /* Main.storyboard */; };
 		2CEF35881D510B5400C5D47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35871D510B5400C5D47F /* Assets.xcassets */; };
 		2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */; };
-		2CEF359B1D51222200C5D47F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; };
-		2CEF359E1D51222C00C5D47F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF35991D51222200C5D47F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; };
-		2CEF35A11D51225D00C5D47F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF359A1D51222200C5D47F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E21D5516A30042EF8B /* Tools.swift */; };
 		2CF8E0E51D55505D0042EF8B /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */; };
-		771FF5741E7BA6D1C40B0668 /* Pods_Coach_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */; };
+		469A5D2307C3040851744B08 /* Pods_Coach_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,10 +36,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2CEF35A11D51225D00C5D47F /* RealmSwift.framework in Embed Frameworks */,
-				2CD5552E1D59176B008CE2D8 /* Bond.framework in Embed Frameworks */,
-				2CD555251D591743008CE2D8 /* Alamofire.framework in Embed Frameworks */,
-				2CEF359E1D51222C00C5D47F /* Realm.framework in Embed Frameworks */,
+				2C18F5AE1D5A73B000E4F895 /* Realm.framework in Embed Frameworks */,
+				2C18F5B11D5A73B600E4F895 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,16 +45,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C18F59E1D5A52B900E4F895 /* ParseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTest.swift; sourceTree = "<group>"; };
+		2C18F5AC1D5A73B000E4F895 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<absolute>"; };
+		2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<absolute>"; };
 		2C232D4E1D53A167008548C8 /* Rower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rower.swift; sourceTree = "<group>"; };
 		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2C232D541D53C46F008548C8 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
 		2C232D5C1D540F64008548C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2CD555231D591743008CE2D8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<absolute>"; };
-		2CD555271D59175E008CE2D8 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "Pods/../build/Debug-iphoneos/ParseFacebookUtilsV4/ParseFacebookUtilsV4.framework"; sourceTree = SOURCE_ROOT; };
-		2CD555281D59175E008CE2D8 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "Pods/../build/Debug-iphoneos/ParseUI/ParseUI.framework"; sourceTree = SOURCE_ROOT; };
-		2CD5552C1D59176B008CE2D8 /* Bond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Bond.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/Bond/Bond.framework"; sourceTree = "<absolute>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -70,13 +62,11 @@
 		2CEF35871D510B5400C5D47F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CEF358A1D510B5400C5D47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CEF358C1D510B5400C5D47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CEF35991D51222200C5D47F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		2CEF359A1D51222200C5D47F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		2CF8E0E21D5516A30042EF8B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.release.xcconfig"; sourceTree = "<group>"; };
 		D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.debug.xcconfig"; sourceTree = "<group>"; };
-		DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coach_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coach_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD5552A1D59175E008CE2D8 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				2CD5552B1D59175E008CE2D8 /* ParseUI.framework in Frameworks */,
-				2CEF359B1D51222200C5D47F /* Realm.framework in Frameworks */,
-				2CEF35A01D51225D00C5D47F /* RealmSwift.framework in Frameworks */,
-				2CD5552D1D59176B008CE2D8 /* Bond.framework in Frameworks */,
-				771FF5741E7BA6D1C40B0668 /* Pods_Coach_Assist.framework in Frameworks */,
-				2CD555241D591743008CE2D8 /* Alamofire.framework in Frameworks */,
+				2C18F5AD1D5A73B000E4F895 /* Realm.framework in Frameworks */,
+				2C18F5B01D5A73B600E4F895 /* RealmSwift.framework in Frameworks */,
+				469A5D2307C3040851744B08 /* Pods_Coach_Assist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +86,6 @@
 		2CEF35721D510B5400C5D47F = {
 			isa = PBXGroup;
 			children = (
-				2CD5552C1D59176B008CE2D8 /* Bond.framework */,
-				2CD555231D591743008CE2D8 /* Alamofire.framework */,
 				2CEF35981D51222200C5D47F /* Frameworks */,
 				2CEF357D1D510B5400C5D47F /* Coach Assist */,
 				2CEF357C1D510B5400C5D47F /* Products */,
@@ -125,6 +109,7 @@
 				2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
 				2CF8E0E21D5516A30042EF8B /* Tools.swift */,
+				2C18F59E1D5A52B900E4F895 /* ParseTest.swift */,
 				2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
 				2C232D541D53C46F008548C8 /* RealmHelper.swift */,
@@ -142,11 +127,9 @@
 		2CEF35981D51222200C5D47F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CD555271D59175E008CE2D8 /* ParseFacebookUtilsV4.framework */,
-				2CD555281D59175E008CE2D8 /* ParseUI.framework */,
-				2CEF35991D51222200C5D47F /* Realm.framework */,
-				2CEF359A1D51222200C5D47F /* RealmSwift.framework */,
-				DDA702D5C42D11D93A9C80FF /* Pods_Coach_Assist.framework */,
+				2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */,
+				2C18F5AC1D5A73B000E4F895 /* Realm.framework */,
+				D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -196,7 +179,7 @@
 				TargetAttributes = {
 					2CEF357A1D510B5400C5D47F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = KUPHH5NVNT;
+						DevelopmentTeam = UFY5SVB422;
 					};
 				};
 			};
@@ -292,6 +275,7 @@
 				2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */,
 				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
 				2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */,
+				2C18F59F1D5A52B900E4F895 /* ParseTest.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
 				2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */,

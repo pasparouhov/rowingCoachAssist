@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         do {
-            try PFUser.logInWithUsername("test", password: "test")
+            try PFUser.logInWithUsername("test2", password: "test2")
         } catch {
             print("Unable to log in")
         }

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class Rower: Object {
+class Rower1: Object {
     dynamic var name = ""
     dynamic var weight = ""
     dynamic var k2 = ""
