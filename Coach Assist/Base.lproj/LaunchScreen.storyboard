@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="App_Icon_startup" translatesAutoresizingMaskIntoConstraints="NO" id="GDG-Ef-95z">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="App_Icon_startup" translatesAutoresizingMaskIntoConstraints="NO" id="GDG-Ef-95z">
                                 <rect key="frame" x="0.0" y="0.0" width="575" height="592"/>
                             </imageView>
                         </subviews>
