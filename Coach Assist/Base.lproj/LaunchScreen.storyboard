@@ -24,7 +24,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GDG-Ef-95z" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="9Wp-yU-1gl"/>
+                            <constraint firstItem="GDG-Ef-95z" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" constant="20" id="9Wp-yU-1gl"/>
                             <constraint firstItem="GDG-Ef-95z" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="EKV-KJ-4aX"/>
                             <constraint firstItem="GDG-Ef-95z" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="GRF-aF-grq"/>
                             <constraint firstItem="GDG-Ef-95z" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="mgQ-a4-MQf"/>

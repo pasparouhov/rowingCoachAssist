@@ -199,6 +199,7 @@ class FirstViewController: UIViewController {
         weatherImage.hidden = true
         editLocation.hidden = true
         zipCode.text = prefs.stringForKey("zipcode")
+        
 
     }
         
