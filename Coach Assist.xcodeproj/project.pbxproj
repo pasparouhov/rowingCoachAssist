@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C18F59F1D5A52B900E4F895 /* ParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F59E1D5A52B900E4F895 /* ParseTest.swift */; };
 		2C18F5AD1D5A73B000E4F895 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AC1D5A73B000E4F895 /* Realm.framework */; };
 		2C18F5AE1D5A73B000E4F895 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AC1D5A73B000E4F895 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C18F5B01D5A73B600E4F895 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */; };
 		2C18F5B11D5A73B600E4F895 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C18F5C41D5AAAF500E4F895 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F5C31D5AAAF500E4F895 /* DisplayRowerViewController.swift */; };
+		2C18F5C61D5AAB0C00E4F895 /* ParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F5C51D5AAB0C00E4F895 /* ParseTest.swift */; };
+		2C18F5CA1D5AAC4E00E4F895 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F5C71D5AAC4E00E4F895 /* ErrorHandling.swift */; };
+		2C18F5CB1D5AAC4E00E4F895 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F5C81D5AAC4E00E4F895 /* ParseHelper.swift */; };
+		2C18F5CC1D5AAC4E00E4F895 /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18F5C91D5AAC4E00E4F895 /* ParseLoginHelper.swift */; };
 		2C232D4F1D53A168008548C8 /* Rower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D4E1D53A167008548C8 /* Rower.swift */; };
 		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D541D53C46F008548C8 /* RealmHelper.swift */; };
-		2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */; };
 		2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C232D5C1D540F64008548C8 /* Images.xcassets */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
@@ -45,14 +48,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C18F59E1D5A52B900E4F895 /* ParseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTest.swift; sourceTree = "<group>"; };
 		2C18F5AC1D5A73B000E4F895 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<absolute>"; };
 		2C18F5AF1D5A73B600E4F895 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = RealmSwift.framework; path = "/Users/pavelasparouhov/Library/Developer/Xcode/DerivedData/Coach_Assist-grqmsgzlijqgsncibiygjzrtwjtx/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<absolute>"; };
+		2C18F5C31D5AAAF500E4F895 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = SOURCE_ROOT; };
+		2C18F5C51D5AAB0C00E4F895 /* ParseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTest.swift; sourceTree = SOURCE_ROOT; };
+		2C18F5C71D5AAC4E00E4F895 /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorHandling.swift; path = "../../../../Downloads/Makestagram-Swift-V2-Solution-part2-solution/Makestagram/Helpers/ErrorHandling.swift"; sourceTree = "<group>"; };
+		2C18F5C81D5AAC4E00E4F895 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseHelper.swift; path = "../../../../Downloads/Makestagram-Swift-V2-Solution-part2-solution/Makestagram/Helpers/ParseHelper.swift"; sourceTree = "<group>"; };
+		2C18F5C91D5AAC4E00E4F895 /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseLoginHelper.swift; path = "../../../../Downloads/Makestagram-Swift-V2-Solution-part2-solution/Makestagram/Helpers/ParseLoginHelper.swift"; sourceTree = "<group>"; };
 		2C232D4E1D53A167008548C8 /* Rower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rower.swift; sourceTree = "<group>"; };
 		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2C232D541D53C46F008548C8 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRowerViewController.swift; sourceTree = "<group>"; };
 		2C232D5C1D540F64008548C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,14 +110,17 @@
 		2CEF357D1D510B5400C5D47F /* Coach Assist */ = {
 			isa = PBXGroup;
 			children = (
+				2C18F5C71D5AAC4E00E4F895 /* ErrorHandling.swift */,
+				2C18F5C81D5AAC4E00E4F895 /* ParseHelper.swift */,
+				2C18F5C91D5AAC4E00E4F895 /* ParseLoginHelper.swift */,
 				2CEF357E1D510B5400C5D47F /* AppDelegate.swift */,
 				2CEF35801D510B5400C5D47F /* FirstViewController.swift */,
-				2C232D5A1D53EFD2008548C8 /* DisplayRowerViewController.swift */,
 				2CEF35821D510B5400C5D47F /* SecondViewController.swift */,
 				2CF8E0E21D5516A30042EF8B /* Tools.swift */,
-				2C18F59E1D5A52B900E4F895 /* ParseTest.swift */,
 				2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
+				2C18F5C51D5AAB0C00E4F895 /* ParseTest.swift */,
+				2C18F5C31D5AAAF500E4F895 /* DisplayRowerViewController.swift */,
 				2C232D541D53C46F008548C8 /* RealmHelper.swift */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
 				2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */,
@@ -274,10 +283,13 @@
 				2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */,
 				2C232D551D53C46F008548C8 /* RealmHelper.swift in Sources */,
 				2C232D4F1D53A168008548C8 /* Rower.swift in Sources */,
-				2C232D5B1D53EFD2008548C8 /* DisplayRowerViewController.swift in Sources */,
-				2C18F59F1D5A52B900E4F895 /* ParseTest.swift in Sources */,
+				2C18F5C41D5AAAF500E4F895 /* DisplayRowerViewController.swift in Sources */,
+				2C18F5C61D5AAB0C00E4F895 /* ParseTest.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
+				2C18F5CC1D5AAC4E00E4F895 /* ParseLoginHelper.swift in Sources */,
+				2C18F5CA1D5AAC4E00E4F895 /* ErrorHandling.swift in Sources */,
 				2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */,
+				2C18F5CB1D5AAC4E00E4F895 /* ParseHelper.swift in Sources */,
 				2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

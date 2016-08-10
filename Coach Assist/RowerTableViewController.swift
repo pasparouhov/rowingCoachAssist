@@ -8,9 +8,11 @@
 
 import UIKit
 import RealmSwift
+import Parse
 
 class RowerTableViewController: UITableViewController {
-    var rowers: Results<Rower1>! {
+    var counter = 0
+    var rowers: [Rower] = []   {
         didSet {
             tableView.reloadData()
         }
@@ -18,7 +20,27 @@ class RowerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        rowers = RealmHelper.retrieveRower()
+        rowers = []
+        let followingQuery = PFQuery(className: "Rower")
+        followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+        followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+            if let result = results {
+                for object in result{
+                    let rower = object as! Rower
+                    self.rowers.append(rower)
+                }
+            }
+        self.tableView.reloadData()
+            
+        }
+      //  rowers = RealmHelper.retrieveRower()
+    }
+    override func viewDidAppear(animated: Bool) {
+        if counter != 0{
+            rowers = []
+            viewDidLoad()
+        }
+        counter += 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,10 +66,19 @@ class RowerTableViewController: UITableViewController {
         //        let cellIdentifier = "RowerTableViewCell"
         let rower = rowers[indexPath.row]
         // 3
-        cell.nameLabel.text = rower.name
-        cell.weightLabel.text = "\(rower.weight) lbs"
-        cell.K2.text = "2k: \(rower.k2)"
-
+        if let name = rower.rowerName{
+            cell.nameLabel.text = name
+        }
+        if let weight = rower.weight{
+            cell.weightLabel.text = "\(weight) lbs"
+        } else {
+            cell.weightLabel.text = ""
+        }
+        if let k2 = rower.k2 {
+            cell.K2.text = "2k: \(k2)"
+        } else {
+            cell.K2.text = ""
+        }
         // Configure the cell...
 
         return cell
@@ -76,11 +107,15 @@ class RowerTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
         if editingStyle == .Delete {
-            //1
-            RealmHelper.deleteRower(rowers[indexPath.row])
-            //2
-            rowers = RealmHelper.retrieveRower()
-        }
+            let followingQuery = PFQuery(className: "Rower")
+            followingQuery.whereKey("rowerName", equalTo:rowers[indexPath.row].rowerName!)
+            followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+            followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+                let deleteRower = results!.first as! Rower//1
+                deleteRower.deleteInBackground()
+                self.viewDidLoad()
+            }
+       }
     }
     @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
         
