@@ -7,17 +7,50 @@
 //
 
 import UIKit
-
+import Parse
 class CoachPracticeTableViewController: UITableViewController {
+    var counter = 0
+    var practices: [Practice] = []   {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let followingQuery = PFQuery(className: "Practice")
+        followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+        followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+            if let result = results {
+                for object in result{
+                    let practice = object as! Practice
+                    print()
+                    print("***************************")
+                    print("practice: \(practice.restSeconds)")
+                    print("***************************")
+                    print()
+                    self.practices.append(practice)
+                    
+                    print()
+                    print("***************************")
+                    print("practices: \(self.practices)")
+                    print("***************************")
+                    print()
+                }
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    override func viewDidAppear(animated: Bool) {
+        if counter != 0{
+            practices = []
+            viewDidLoad()
+        }
+        counter += 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +62,54 @@ class CoachPracticeTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return practices.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("CoachPracticeTableViewCell", forIndexPath: indexPath) as! CoachPracticeTableViewCell
+        let practice = practices[indexPath.row]
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        if let practiceDate = practice.practiceDate{
+            let dateString = formatter.stringFromDate(practiceDate)
+            cell.practiceDate.text = dateString
+        }
+        if let location = practice.location{
+            cell.practiceTime.text = location
+        }
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // 1
+        if let identifier = segue.identifier {
+            // 2
+            if identifier == "viewPractice" {
+                // 1
+                let indexPath = tableView.indexPathForSelectedRow!
+                // 2
+                let practice = practices[indexPath.row]
+                // 3
+                let displayPracticeViewController = segue.destinationViewController as! DisplayCoachPracticeViewController
+                
+                // 4
+                displayPracticeViewController.practice = practice
+                print("Transitioning to the Display Note View Controller")
+            } else if identifier == "addPractice"{
+                print("+ button tapped")
+            }
+        }
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +155,12 @@ class CoachPracticeTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func unwindToPractice(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
+
 
 }

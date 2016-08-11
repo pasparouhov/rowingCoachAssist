@@ -10,6 +10,8 @@ import UIKit
 
 class CoachPracticeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var practiceTime: UILabel!
+    @IBOutlet weak var practiceDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

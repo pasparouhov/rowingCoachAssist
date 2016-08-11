@@ -7,12 +7,20 @@
 //
 
 import UIKit
-
+import Parse
 class DisplayCoachPracticeViewController: UIViewController {
-
+    @IBOutlet weak var intervals: UITextField!
+    @IBOutlet weak var restSec: UITextField!
+    @IBOutlet weak var restMin: UITextField!
+    @IBOutlet weak var workoutSec: UITextField!
+    @IBOutlet weak var workoutTime: UITextField!
+    @IBOutlet weak var timeOrDistance: UISegmentedControl!
+    @IBOutlet weak var practiceLocation: UITextField!
+    @IBOutlet weak var practiceDate: UIDatePicker!
+    var practice: Practice?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DisplayCoachPracticeViewController.dismissKeyboard))
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +29,130 @@ class DisplayCoachPracticeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveWorkout(sender: AnyObject) {
+        if let practice = practice {
+            let followingQuery = PFQuery(className: "Practice")
+            followingQuery.whereKey("practiceDate", equalTo:practice.practiceDate!)
+            followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+            let updatePractice = results!.first as! Practice
+            updatePractice.practiceDate = self.practiceDate.date
+            updatePractice.location = self.practiceLocation.text
+            switch self.timeOrDistance.selectedSegmentIndex {
+                case 0:
+                    updatePractice.setObject(false, forKey: "timeOrDistance")
+                case 1:
+                    updatePractice.setObject(true, forKey: "timeOrDistance")
+                default:
+                    break
+            }
+            if let workoutTime = self.workoutTime.text{
+                updatePractice.workoutMinute = Int(workoutTime)
+            }
+            if let workoutSec = self.workoutSec.text{
+                updatePractice.workoutSeconds = Int(workoutSec)
+            }
+            if let restMin = self.restMin.text {
+                    updatePractice.restMinutes = Int(restMin)
+            }
+            if let restSec = self.restSec.text {
+                    updatePractice.restSeconds = Int(restSec)
+            }
+            if let intervals = self.intervals.text {
+                    updatePractice.intervals = Int(intervals)
+            }
+            updatePractice.saveInBackground()
+            }
+
+        } else {
+            let updatePractice = Practice()
+            updatePractice.practiceDate = self.practiceDate.date
+            updatePractice.location = self.practiceLocation.text
+            switch self.timeOrDistance.selectedSegmentIndex {
+            case 0:
+                updatePractice.setObject(false, forKey: "timeOrDistance")
+            case 1:
+                updatePractice.setObject(true, forKey: "timeOrDistance")
+            default:
+                break
+            }
+            if let workoutTime = self.workoutTime.text{
+                updatePractice.workoutMinute = Int(workoutTime)
+            }
+            if let workoutSec = self.workoutSec.text{
+                updatePractice.workoutSeconds = Int(workoutSec)
+            }
+            if let restMin = self.restMin.text {
+                updatePractice.restMinutes = Int(restMin)
+            }
+            if let restSec = self.restSec.text {
+                updatePractice.restSeconds = Int(restSec)
+            }
+            if let intervals = self.intervals.text {
+                updatePractice.intervals = Int(intervals)
+            }
+            updatePractice.coachName = PFUser.currentUser()
+            updatePractice.saveInBackground()
+
+        }
+    }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let practice = practice {
+            practiceDate.date = practice.practiceDate!
+            practiceLocation.text = practice.location
+            let distanceOrTime = practice["timeOrDistance"] as! Bool
+            if distanceOrTime {
+                self.timeOrDistance.selectedSegmentIndex = 1
+            } else {
+                self.timeOrDistance.selectedSegmentIndex = 0
+            }
+            if let placeHolder = practice.workoutMinute{
+                self.workoutTime.text = String(placeHolder)
+            } else {
+                self.workoutTime.text = ""
+            }
+            if let placeHolder = practice.workoutSeconds{
+//                print(placeHolder)
+                self.workoutSec.text = String(placeHolder)
+            } else {
+                self.workoutSec.text = ""
+            }
+            if let placeHolder = practice.restSeconds{
+                print()
+                print("*****************************")
+//                print(String(format: "%02d", placeHolder.stringValue))
+                print(placeHolder)
+                print("*****************************")
+                print()
+//                self.restSec.text = String(format: "%02d", placeHolder.stringValue)
+                self.restSec.text = String(placeHolder.stringValue)
+            } else {
+                self.restSec.text = ""
+            }
+            if let placeHolder = practice.restMinutes{
+                self.restMin.text = String(placeHolder)
+            } else {
+                self.restMin.text = ""
+            }
+            if let placeHolder = practice.intervals{
+                self.intervals.text = String(placeHolder)
+            } else {
+                self.intervals.text = ""
+            }
+        } else {
+            workoutTime.text = ""
+            workoutSec.text = ""
+            restSec.text = ""
+            restMin.text = ""
+            intervals.text = ""
+            practiceLocation.text = ""
+
+        }
+    }
 
     /*
     // MARK: - Navigation
