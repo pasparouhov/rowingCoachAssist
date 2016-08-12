@@ -1119,7 +1119,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-Vy-EFN" customClass="Tea">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-Vy-EFN" customClass="Tea">
                                             <rect key="frame" x="8" y="8" width="117" height="27"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1127,6 +1127,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="c5V-Vy-EFN" firstAttribute="centerY" secondItem="SAG-JC-DoE" secondAttribute="centerY" id="Ql8-JO-MJO"/>
+                                        <constraint firstItem="c5V-Vy-EFN" firstAttribute="width" secondItem="SAG-JC-DoE" secondAttribute="width" id="uAm-6c-CxO"/>
                                         <constraint firstItem="c5V-Vy-EFN" firstAttribute="centerX" secondItem="SAG-JC-DoE" secondAttribute="centerX" id="uFI-e1-ApV"/>
                                     </constraints>
                                 </tableViewCellContentView>
