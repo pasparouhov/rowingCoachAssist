@@ -309,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="1467" y="107"/>
         </scene>
-        <!--Title-->
+        <!--Rower-->
         <scene sceneID="mwl-PL-Yc5">
             <objects>
                 <viewController id="PY5-Cx-htv" customClass="DisplayRowerViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
@@ -548,7 +548,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="le7-M8-2fz">
+                    <navigationItem key="navigationItem" title="Rower" id="le7-M8-2fz">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W9m-kA-d0v">
                             <connections>
                                 <segue destination="uLW-gs-qEQ" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="1K5-59-R7P"/>
@@ -578,7 +578,7 @@
             </objects>
             <point key="canvasLocation" x="2236" y="107"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Your Practices-->
         <scene sceneID="YXS-cm-B34">
             <objects>
                 <tableViewController id="ZId-We-DWH" customClass="RowerPracticeTableViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
@@ -587,7 +587,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="otM-VE-axe" customClass="RowerPracticeTableViewCell" customModule="Coach_Assist" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RowerPracticeTableViewCell" rowHeight="79" id="otM-VE-axe" customClass="RowerPracticeTableViewCell" customModule="Coach_Assist" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="otM-VE-axe" id="C8j-s9-yg7">
@@ -606,7 +606,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-XN-ZIE">
                                             <rect key="frame" x="8" y="34" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -631,7 +631,7 @@
                             <outlet property="delegate" destination="ZId-We-DWH" id="tWM-OH-ftw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="IWm-vf-iJh"/>
+                    <navigationItem key="navigationItem" title="Your Practices" id="IWm-vf-iJh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXB-gv-blU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -714,7 +714,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Avv-9H-pZm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -760,10 +760,10 @@
             </objects>
             <point key="canvasLocation" x="10" y="218"/>
         </scene>
-        <!--Third View-->
+        <!--Tools View-->
         <scene sceneID="kf9-HG-hm2">
             <objects>
-                <viewController title="Third View" id="L4y-XY-S7y" customClass="Tools" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Third View" id="L4y-XY-S7y" userLabel="Tools View" customClass="Tools" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8dg-so-QqF"/>
                         <viewControllerLayoutGuide type="bottom" id="83B-aM-bOx"/>
@@ -956,10 +956,10 @@
             </objects>
             <point key="canvasLocation" x="766" y="612"/>
         </scene>
-        <!--Fourth View-->
+        <!--Workout View-->
         <scene sceneID="DCp-ax-j8r">
             <objects>
-                <viewController title="Fourth View" id="Iw0-6J-HrF" customClass="WorkoutViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fourth View" id="Iw0-6J-HrF" userLabel="Workout View" customClass="WorkoutViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GQC-bA-pDE"/>
                         <viewControllerLayoutGuide type="bottom" id="Vgz-1F-k7E"/>
@@ -1103,6 +1103,148 @@
             </objects>
             <point key="canvasLocation" x="760" y="1256"/>
         </scene>
+        <!--Your Team-->
+        <scene sceneID="JTQ-Vt-WSv">
+            <objects>
+                <tableViewController id="KTv-bA-Atc" customClass="TeamTableViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="CV5-db-osP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamTableViewCell" id="gU0-3e-bsk" customClass="TeamTableViewCell" customModule="Coach_Assist" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gU0-3e-bsk" id="SAG-JC-DoE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-Vy-EFN" customClass="Tea">
+                                            <rect key="frame" x="8" y="8" width="117" height="27"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="c5V-Vy-EFN" firstAttribute="centerX" secondItem="SAG-JC-DoE" secondAttribute="centerX" id="uFI-e1-ApV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="teamName" destination="c5V-Vy-EFN" id="NkL-SX-XV6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KTv-bA-Atc" id="hs9-Yc-rMa"/>
+                            <outlet property="delegate" destination="KTv-bA-Atc" id="3ty-p5-U5b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Team" id="Lpg-LL-of7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="UVZ-vd-WUs">
+                            <connections>
+                                <segue destination="Wo1-iP-dlB" kind="unwind" unwindAction="unwindToPractice:" id="Sxk-kc-DCb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="92w-IG-fac">
+                            <connections>
+                                <segue destination="MML-bW-IN8" kind="show" id="OxC-g7-Lyq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLV-HY-aIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Wo1-iP-dlB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2196" y="1180"/>
+        </scene>
+        <!--Add To Team-->
+        <scene sceneID="iec-bP-6Uf">
+            <objects>
+                <viewController id="MML-bW-IN8" customClass="AddToTeamViewController" customModule="Coach_Assist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WNC-va-2Mm"/>
+                        <viewControllerLayoutGuide type="bottom" id="NQN-Oe-IxJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WfP-ga-Icw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-IK-P1S">
+                                <rect key="frame" x="230" y="134" width="140" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7R-ZU-hKB">
+                                <rect key="frame" x="102" y="178" width="397" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cGc-7H-A5y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-WI-Vef">
+                                <rect key="frame" x="277" y="238" width="46" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="raO-3m-3GU"/>
+                                    <constraint firstAttribute="height" constant="40" id="rps-Y2-jje"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addToTeam:" destination="MML-bW-IN8" eventType="touchUpInside" id="vxg-zu-Wg3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Facebook username is full name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I4-kN-5ah">
+                                <rect key="frame" x="170" y="346" width="261" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="Nx1-i6-XA3"/>
+                                    <constraint firstAttribute="height" constant="21" id="mrE-Ep-noR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2I4-kN-5ah" firstAttribute="centerY" secondItem="WfP-ga-Icw" secondAttribute="centerY" multiplier="1.33" id="5Ln-7y-qxZ"/>
+                            <constraint firstItem="x7R-ZU-hKB" firstAttribute="centerX" secondItem="WfP-ga-Icw" secondAttribute="centerX" id="82j-EU-Rde"/>
+                            <constraint firstItem="x7R-ZU-hKB" firstAttribute="width" secondItem="WfP-ga-Icw" secondAttribute="width" multiplier="0.66" constant="1" id="HJV-jF-b2N"/>
+                            <constraint firstItem="AoV-WI-Vef" firstAttribute="top" secondItem="x7R-ZU-hKB" secondAttribute="bottom" constant="20" id="NDM-T5-xMC"/>
+                            <constraint firstItem="x7R-ZU-hKB" firstAttribute="centerY" secondItem="WfP-ga-Icw" secondAttribute="centerY" multiplier="0.66" id="X6c-xD-pp2"/>
+                            <constraint firstItem="2I4-kN-5ah" firstAttribute="centerX" secondItem="WfP-ga-Icw" secondAttribute="centerX" id="qaY-Xp-Xhy"/>
+                            <constraint firstItem="AoV-WI-Vef" firstAttribute="centerX" secondItem="WfP-ga-Icw" secondAttribute="centerX" id="svY-w9-gz5"/>
+                            <constraint firstItem="uxg-IK-P1S" firstAttribute="centerX" secondItem="WfP-ga-Icw" secondAttribute="centerX" id="tN3-VB-wER"/>
+                            <constraint firstItem="x7R-ZU-hKB" firstAttribute="top" secondItem="uxg-IK-P1S" secondAttribute="bottom" constant="20" id="uEC-Gb-wSr"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add To Team" id="uXo-6f-4FF"/>
+                    <connections>
+                        <outlet property="username" destination="x7R-ZU-hKB" id="TVz-7k-Srx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A65-WF-sRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="1180"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dID-UM-nU6">
+            <objects>
+                <navigationController id="5df-Zf-goB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vb1-ZT-n96">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KTv-bA-Atc" kind="relationship" relationship="rootViewController" id="sWA-LN-3yz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp7-qE-zJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="1180"/>
+        </scene>
         <!--Practices-->
         <scene sceneID="qM4-E5-WgQ">
             <objects>
@@ -1134,7 +1276,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="ntL-VD-Fxa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1161,6 +1303,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Practices" id="ki3-Q1-PEc">
+                        <barButtonItem key="leftBarButtonItem" title="View Team" id="93u-ah-hKk">
+                            <connections>
+                                <segue destination="5df-Zf-goB" kind="show" id="eHR-GP-BO6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fka-tP-vj2">
                             <connections>
                                 <segue destination="ke6-GJ-3Ve" kind="show" identifier="addPractice" id="vAY-0Y-T64"/>
@@ -1239,7 +1386,7 @@
                                             <constraint firstAttribute="height" constant="40" id="lxj-DA-W5O"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-Ed-oSG">
@@ -1258,7 +1405,7 @@
                                             <constraint firstAttribute="width" constant="6" id="eBK-cB-eCh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sec" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unP-1L-adU">
@@ -1286,7 +1433,7 @@
                                             <constraint firstAttribute="height" constant="40" id="pPt-Za-z1Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-ce-Kpg">
@@ -1305,7 +1452,7 @@
                                             <constraint firstAttribute="width" constant="6" id="ZP4-Hf-rxR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sec" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGD-k1-zLp">
@@ -1339,7 +1486,7 @@
                                             <constraint firstAttribute="height" constant="40" id="YHT-Ne-uYW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">

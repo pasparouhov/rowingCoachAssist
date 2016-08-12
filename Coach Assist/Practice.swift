@@ -15,11 +15,11 @@ class Practice : PFObject, PFSubclassing {
     @NSManaged var practiceDate: NSDate?
     @NSManaged var time: String?
     @NSManaged var distance: String?
-    @NSManaged var workoutMinute: NSNumber?
-    @NSManaged var workoutSeconds: NSNumber?
-    @NSManaged var restMinutes: NSNumber?
-    @NSManaged var restSeconds: NSNumber?
-    @NSManaged var intervals: NSNumber?
+    @NSManaged var workoutMinute: String?
+    @NSManaged var workoutSeconds: String?
+    @NSManaged var restMinutes: String?
+    @NSManaged var restSeconds: String?
+    @NSManaged var intervals: String?
     
     
     

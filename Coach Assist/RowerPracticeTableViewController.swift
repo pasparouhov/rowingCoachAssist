@@ -22,12 +22,15 @@ class RowerPracticeTableViewController: UITableViewController {
         super.viewDidLoad()
         practices = []
         let followingQuery = PFQuery(className: "InviteToTeam")
+        
         followingQuery.whereKey("toUser", equalTo:PFUser.currentUser()!)
+        
         followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
             if let results = results {
                 let invitation = results.first as! InviteToTeam
                 let practiceQuery = PFQuery(className: "Practice")
                 practiceQuery.whereKey("coachName", equalTo: invitation.fromUser!)
+                practiceQuery.orderByAscending("practiceDate")
                 practiceQuery.findObjectsInBackgroundWithBlock { (practiceResultsOpt: [PFObject]?, error: NSError?) in
                     if let practiceResults = practiceResultsOpt{
                         for practice in practiceResults {
@@ -78,14 +81,19 @@ class RowerPracticeTableViewController: UITableViewController {
             if let time = practice.time {
                 cell.timeAndDate.text = "\(date) at \(time)"
             } else {
-                cell.timeAndDate.text = "\(date)"
+                let formatter = NSDateFormatter()
+                formatter.dateStyle = NSDateFormatterStyle.LongStyle
+                formatter.timeStyle = .ShortStyle
+                
+                let dateString = formatter.stringFromDate(date)
+                cell.timeAndDate.text = "\(dateString)"
 
             }
         } else {
             cell.timeAndDate.text = ""
         }
         if let location = practice.location{
-            cell.location.text = "\(location) lbs"
+            cell.location.text = "\(location)"
         } else {
             cell.location.text = ""
         }
@@ -111,19 +119,6 @@ class RowerPracticeTableViewController: UITableViewController {
                 displayRowerPracticeViewController.practice = practice
                 print("Transitioning to the Display Practice View Controller")
             } 
-        }
-    }
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
-    {
-        if editingStyle == .Delete {
-            let followingQuery = PFQuery(className: "Rower")
-            followingQuery.whereKey("practiceDate", equalTo:practices[indexPath.row].practiceDate!)
-            followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
-            followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
-                let deleteRower = results!.first as! Rower//1
-                deleteRower.deleteInBackground()
-                self.viewDidLoad()
-            }
         }
     }
     @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {

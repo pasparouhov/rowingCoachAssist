@@ -1,47 +1,62 @@
 //
-//  CoachPracticeTableViewController.swift
+//  TeamTableViewController.swift
 //  Coach Assist
 //
-//  Created by Pavel Asparouhov on 8/10/16.
+//  Created by Pavel Asparouhov on 8/11/16.
 //  Copyright © 2016 BigP inc. All rights reserved.
 //
 
 import UIKit
 import Parse
-class CoachPracticeTableViewController: UITableViewController {
+class TeamTableViewController: UITableViewController {
     var counter = 0
-    var practices: [Practice] = []   {
+    var userIDs: [String] = []   {
         didSet {
             tableView.reloadData()
         }
     }
-
+    var users: [String] = []   {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    let followingQuery : PFQuery = PFUser.query()!
     override func viewDidLoad() {
         super.viewDidLoad()
-        practices = []
-        let followingQuery = PFQuery(className: "Practice")
-        followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+        let followingQuery = PFQuery(className: "InviteToTeam")
+        followingQuery.whereKey("fromUser", equalTo: PFUser.currentUser()!)
+        
         followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
-            if let result = results {
-                for object in result{
-                    let practice = object as! Practice
-                    self.practices.append(practice)
+            if let results = results {
+                print(results)
+                for result in results {
+                    let user = result["toUser"] as! PFUser
+                    let objectID =  user.objectId    // user["objectID"] as! String
+
+                    self.userIDs.append(objectID!)
                     
                 }
             }
         }
+        
+        let nameQuery : PFQuery = PFUser.query()!
+        for userID in userIDs {
+            nameQuery.whereKey("objectID", equalTo: userID)
+            followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+                if let results = results {
+                    let user = results.first! as! PFUser
+                    self.users.append(user.username!)
+                    
+                }
+            }
+            
+        }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    override func viewDidAppear(animated: Bool) {
-        if counter != 0{
-            practices = []
-            viewDidLoad()
-        }
-        counter += 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,49 +73,25 @@ class CoachPracticeTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return practices.count
+        return users.count
     }
-
+    override func viewDidAppear(animated: Bool) {
+        if counter != 0{
+            users = []
+            viewDidLoad()
+        }
+        counter += 1
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CoachPracticeTableViewCell", forIndexPath: indexPath) as! CoachPracticeTableViewCell
-        let practice = practices[indexPath.row]
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.LongStyle
-        formatter.timeStyle = .MediumStyle
-        if let practiceDate = practice.practiceDate{
-            let dateString = formatter.stringFromDate(practiceDate)
-            cell.practiceDate.text = dateString
-        }
-        if let location = practice.location{
-            cell.practiceTime.text = location
-        }
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("TeamTableViewCell", forIndexPath: indexPath) as! TeamTableViewCell
+        let user = users[indexPath.row]
+        cell.teamName.text = user
         // Configure the cell...
 
         return cell
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // 1
-        if let identifier = segue.identifier {
-            // 2
-            if identifier == "viewPractice" {
-                // 1
-                let indexPath = tableView.indexPathForSelectedRow!
-                // 2
-                let practice = practices[indexPath.row]
-                // 3
-                let displayPracticeViewController = segue.destinationViewController as! DisplayCoachPracticeViewController
-                
-                // 4
-                displayPracticeViewController.practice = practice
-                print("Transitioning to the Display Note View Controller")
-            } else if identifier == "addPractice"{
-                print("+ button tapped")
-            }
-        }
-    }
-
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -146,24 +137,5 @@ class CoachPracticeTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func unwindToPractice(segue: UIStoryboardSegue) {
-        
-        // for now, simply defining the method is sufficient.
-        // we'll add code later
-        
-    }
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
-    {
-        if editingStyle == .Delete {
-            let followingQuery = PFQuery(className: "Practice")
-            followingQuery.whereKey("practiceDate", equalTo:practices[indexPath.row].practiceDate!)
-            followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
-                let deletePractice = results!.first as! Practice//1
-                deletePractice.deleteInBackground()
-                self.viewDidLoad()
-            }
-        }
-    }
-
 
 }

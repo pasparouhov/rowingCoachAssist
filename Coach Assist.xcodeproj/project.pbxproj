@@ -29,6 +29,9 @@
 		2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */; };
 		2C232D531D53B235008548C8 /* RowerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C232D521D53B235008548C8 /* RowerTableViewController.swift */; };
 		2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C232D5C1D540F64008548C8 /* Images.xcassets */; };
+		2CC40B561D5D237A00FDBDBD /* AddToTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC40B551D5D237900FDBDBD /* AddToTeamViewController.swift */; };
+		2CE5BD091D5D364800DDA457 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5BD081D5D364800DDA457 /* TeamTableViewController.swift */; };
+		2CE5BD0B1D5D396E00DDA457 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5BD0A1D5D396E00DDA457 /* TeamTableViewCell.swift */; };
 		2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF357E1D510B5400C5D47F /* AppDelegate.swift */; };
 		2CEF35811D510B5400C5D47F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF35801D510B5400C5D47F /* FirstViewController.swift */; };
 		2CEF35861D510B5400C5D47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35841D510B5400C5D47F /* Main.storyboard */; };
@@ -75,6 +78,9 @@
 		2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewCell.swift; sourceTree = "<group>"; };
 		2C232D521D53B235008548C8 /* RowerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowerTableViewController.swift; sourceTree = "<group>"; };
 		2C232D5C1D540F64008548C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CC40B551D5D237900FDBDBD /* AddToTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToTeamViewController.swift; sourceTree = "<group>"; };
+		2CE5BD081D5D364800DDA457 /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		2CE5BD0A1D5D396E00DDA457 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		2CEF357B1D510B5400C5D47F /* Coach Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEF357E1D510B5400C5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEF35801D510B5400C5D47F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 				2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */,
 				2CF8E0E21D5516A30042EF8B /* Tools.swift */,
 				2C18F5CF1D5BA80000E4F895 /* RowerOrCoachViewController.swift */,
+				2CC40B551D5D237900FDBDBD /* AddToTeamViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 				2C18F5D71D5BC63400E4F895 /* RowerPracticeTableViewController.swift */,
 				2C232D521D53B235008548C8 /* RowerTableViewController.swift */,
 				2C18F5E71D5BF0FE00E4F895 /* CoachPracticeTableViewController.swift */,
+				2CE5BD081D5D364800DDA457 /* TeamTableViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				2C18F5E91D5BF15000E4F895 /* CoachPracticeTableViewCell.swift */,
 				2C232D501D53AD4E008548C8 /* RowerTableViewCell.swift */,
 				2C18F5D91D5BC69000E4F895 /* RowerPracticeTableViewCell.swift */,
+				2CE5BD0A1D5D396E00DDA457 /* TeamTableViewCell.swift */,
 			);
 			name = CellViewControllers;
 			sourceTree = "<group>";
@@ -348,7 +357,9 @@
 			files = (
 				2CEF357F1D510B5400C5D47F /* AppDelegate.swift in Sources */,
 				2C18F5D81D5BC63400E4F895 /* RowerPracticeTableViewController.swift in Sources */,
+				2CC40B561D5D237A00FDBDBD /* AddToTeamViewController.swift in Sources */,
 				2C18F5DC1D5BC86500E4F895 /* DisplayRowerPracticeViewController.swift in Sources */,
+				2CE5BD0B1D5D396E00DDA457 /* TeamTableViewCell.swift in Sources */,
 				2C18F5EC1D5BF1E300E4F895 /* DisplayCoachPracticeViewController.swift in Sources */,
 				2CF8E0E51D55505D0042EF8B /* WorkoutViewController.swift in Sources */,
 				2C18F5E81D5BF0FE00E4F895 /* CoachPracticeTableViewController.swift in Sources */,
@@ -366,6 +377,7 @@
 				2C18F5D21D5BC02300E4F895 /* Rower.swift in Sources */,
 				2C18F5CB1D5AAC4E00E4F895 /* ParseHelper.swift in Sources */,
 				2C18F5E01D5BD73200E4F895 /* InviteToTeam.swift in Sources */,
+				2CE5BD091D5D364800DDA457 /* TeamTableViewController.swift in Sources */,
 				2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

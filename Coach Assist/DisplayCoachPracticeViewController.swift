@@ -46,19 +46,19 @@ class DisplayCoachPracticeViewController: UIViewController {
                     break
             }
             if let workoutTime = self.workoutTime.text{
-                updatePractice.workoutMinute = Int(workoutTime)
+                updatePractice.workoutMinute = workoutTime
             }
             if let workoutSec = self.workoutSec.text{
-                updatePractice.workoutSeconds = Int(workoutSec)
+                updatePractice.workoutSeconds = workoutSec
             }
             if let restMin = self.restMin.text {
-                    updatePractice.restMinutes = Int(restMin)
+                    updatePractice.restMinutes = restMin
             }
             if let restSec = self.restSec.text {
-                    updatePractice.restSeconds = Int(restSec)
+                    updatePractice.restSeconds = restSec
             }
             if let intervals = self.intervals.text {
-                    updatePractice.intervals = Int(intervals)
+                    updatePractice.intervals = intervals
             }
             updatePractice.saveInBackground()
             }
@@ -76,19 +76,19 @@ class DisplayCoachPracticeViewController: UIViewController {
                 break
             }
             if let workoutTime = self.workoutTime.text{
-                updatePractice.workoutMinute = Int(workoutTime)
+                updatePractice.workoutMinute = workoutTime
             }
             if let workoutSec = self.workoutSec.text{
-                updatePractice.workoutSeconds = Int(workoutSec)
+                updatePractice.workoutSeconds = workoutSec
             }
             if let restMin = self.restMin.text {
-                updatePractice.restMinutes = Int(restMin)
+                updatePractice.restMinutes = restMin
             }
             if let restSec = self.restSec.text {
-                updatePractice.restSeconds = Int(restSec)
+                updatePractice.restSeconds = restSec
             }
             if let intervals = self.intervals.text {
-                updatePractice.intervals = Int(intervals)
+                updatePractice.intervals = intervals
             }
             updatePractice.coachName = PFUser.currentUser()
             updatePractice.saveInBackground()
@@ -122,14 +122,7 @@ class DisplayCoachPracticeViewController: UIViewController {
                 self.workoutSec.text = ""
             }
             if let placeHolder = practice.restSeconds{
-                print()
-                print("*****************************")
-//                print(String(format: "%02d", placeHolder.stringValue))
-                print(placeHolder)
-                print("*****************************")
-                print()
-//                self.restSec.text = String(format: "%02d", placeHolder.stringValue)
-                self.restSec.text = String(placeHolder.stringValue)
+                self.restSec.text = String(placeHolder)
             } else {
                 self.restSec.text = ""
             }
