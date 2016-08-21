@@ -17,32 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     override init() {
         super.init()
-        
-        parseLoginHelper = ParseLoginHelper {[unowned self] user, error in
-            // Initialize the ParseLoginHelper with a callback
-            if let error = error {
-                // 1
-                ErrorHandling.defaultErrorHandler(error)
-            } else  if let _ = user {
-                // if login was successful, display the TabBarController
-                // 2
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let user = PFUser.currentUser()!
-                let rowerOrCoachOpt = user["coach"] as! Bool?
-                if let rowerOrCoach = rowerOrCoachOpt{
-                    if rowerOrCoach{
-                        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
-                        self.window?.rootViewController!.presentViewController(tabBarController, animated:true, completion:nil)
-                    } else {
-                        let rowerViewController = storyboard.instantiateViewControllerWithIdentifier("RowerView")
-                        self.window?.rootViewController!.presentViewController(rowerViewController, animated:true, completion:nil)
-                    }
-                } else {
-                    let coachOrRowerViewController = storyboard.instantiateViewControllerWithIdentifier("CoachOrRower")
-                    self.window?.rootViewController!.presentViewController(coachOrRowerViewController, animated:true, completion:nil)
-                    
-                }            }
-        }
+        test2()
     }
     var window: UIWindow?
 
@@ -56,48 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initializeWithConfiguration(configuration)
         // Initialize Facebook
+        test()
         // 1
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         // check if we have logged in user
         // 2
-        let user = PFUser.currentUser()
-        
-        let startViewController: UIViewController
-        
-        if let user = user {
-            // 3
-            // if we have a user, set the TabBarController to be the initial view controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let rowerOrCoachOpt = user["coach"] as! Bool?
-            var controller = ""
-            if let rowerOrCoach = rowerOrCoachOpt{
-                if rowerOrCoach{
-                    controller = "TabBarController"
-                } else {
-                    controller = "RowerView"
-                }
-            } else {
-                controller = "CoachOrRower"
-            }
-
-            startViewController = storyboard.instantiateViewControllerWithIdentifier(controller)
-        } else {
-            // 4
-            // Otherwise set the LoginViewController to be the first
-            let loginViewController = PFLogInViewController()
-            loginViewController.fields = [.UsernameAndPassword, .LogInButton, .SignUpButton, .PasswordForgotten, .Facebook]
-            loginViewController.delegate = parseLoginHelper
-            loginViewController.signUpController?.delegate = parseLoginHelper
-            
-            startViewController = loginViewController
-        }
-        
-        // 5
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = startViewController;
-        self.window?.makeKeyAndVisible()
-        return true
+         return true
     }
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
@@ -124,6 +64,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    func test(){
+        let user = PFUser.currentUser()
+        
+        let startViewController: UIViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var controller = ""
+
+        if let user = user {
+            let rowerOrCoachOpt = user["coach"] as! Bool?
+            // 3
+            // if we have a user, set the TabBarController to be the initial view controller
+             if let rowerOrCoach = rowerOrCoachOpt{
+                if rowerOrCoach{
+                    controller = "TabBarController"
+                } else {
+                    controller = "RowerView"
+                }
+            } else {
+                controller = "CoachOrRower"
+            }
+            
+            
+        } else {
+            // 4
+            // Otherwise set the LoginViewController to be the first
+            controller = "Login"
+            
+            
+        }
+        startViewController = storyboard.instantiateViewControllerWithIdentifier(controller)
+
+        // 5
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = startViewController;
+        self.window?.makeKeyAndVisible()
+
+        
+    }
+    func test2(){
+        
+        parseLoginHelper = ParseLoginHelper {[unowned self] user, error in
+            // Initialize the ParseLoginHelper with a callback
+            if let error = error {
+                // 1
+                ErrorHandling.defaultErrorHandler(error)
+            } else  if let _ = user {
+                // if login was successful, display the TabBarController
+                // 2
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let user = PFUser.currentUser()!
+                let rowerOrCoachOpt = user["coach"] as! Bool?
+                if let rowerOrCoach = rowerOrCoachOpt{
+                    if rowerOrCoach{
+                        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+                        self.window?.rootViewController!.presentViewController(tabBarController, animated:true, completion:nil)
+                    } else {
+                        let rowerViewController = storyboard.instantiateViewControllerWithIdentifier("RowerView")
+                        self.window?.rootViewController!.presentViewController(rowerViewController, animated:true, completion:nil)
+                    }
+                } else {
+                    let coachOrRowerViewController = storyboard.instantiateViewControllerWithIdentifier("CoachOrRower")
+                    self.window?.rootViewController!.presentViewController(coachOrRowerViewController, animated:true, completion:nil)
+                    
+                }            }
+        }
     }
 
 

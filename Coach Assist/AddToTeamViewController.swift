@@ -35,6 +35,8 @@ class AddToTeamViewController: UIViewController {
                         newInvite.setObject(toUser, forKey: "toUser")
                         newInvite.setObject(PFUser.currentUser()!, forKey: "fromUser")
                         newInvite.saveInBackground()
+                         self.performSegueWithIdentifier("unwindToTeam", sender: self)
+                        
                     } else {
                         let alertController = UIAlertController(title: "User not found", message:
                             "No user with that username", preferredStyle: UIAlertControllerStyle.Alert)

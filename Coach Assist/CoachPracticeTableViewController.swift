@@ -21,6 +21,7 @@ class CoachPracticeTableViewController: UITableViewController {
         practices = []
         let followingQuery = PFQuery(className: "Practice")
         followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+        followingQuery.orderByAscending("practiceDate")
         followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
             if let result = results {
                 for object in result{

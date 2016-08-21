@@ -71,6 +71,7 @@ class TeamTableViewController: UITableViewController {
         if self.userIDs.count > 0 {
             let nameQuery : PFQuery = PFUser.query()!
             nameQuery.whereKey("objectId", containedIn: self.userIDs)
+            nameQuery.orderByAscending("username")
             nameQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
                 if let results = results{
                     for result in results {
@@ -182,7 +183,7 @@ class TeamTableViewController: UITableViewController {
                 if let results = results{
                     if results.count != 0 {
                         self.deleteInviteWithObjectID(results.first! as! PFUser)
-                        self.deleteInviteWithObjectID(results.first! as! PFUser)
+
                     }
                 }
                 
@@ -203,6 +204,12 @@ class TeamTableViewController: UITableViewController {
             
         }
         viewDidLoad()
+    }
+    @IBAction func unwindToTeam(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
     }
     
     

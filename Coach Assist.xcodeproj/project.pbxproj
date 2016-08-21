@@ -39,6 +39,13 @@
 		2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */; };
 		2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E21D5516A30042EF8B /* Tools.swift */; };
 		2CF8E0E51D55505D0042EF8B /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */; };
+		2CFA10E31D651578004A8EE1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10E21D651578004A8EE1 /* LoginViewController.swift */; };
+		2CFA10E51D666397004A8EE1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10E41D666397004A8EE1 /* SignUpViewController.swift */; };
+		2CFA10EF1D694E8D004A8EE1 /* BebasNeue Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA10EA1D694E8D004A8EE1 /* BebasNeue Bold.otf */; };
+		2CFA10F01D694E8D004A8EE1 /* BebasNeue Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA10EB1D694E8D004A8EE1 /* BebasNeue Book.otf */; };
+		2CFA10F11D694E8D004A8EE1 /* BebasNeue Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA10EC1D694E8D004A8EE1 /* BebasNeue Light.otf */; };
+		2CFA10F21D694E8D004A8EE1 /* BebasNeue Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA10ED1D694E8D004A8EE1 /* BebasNeue Regular.otf */; };
+		2CFA10F31D694E8D004A8EE1 /* BebasNeue Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA10EE1D694E8D004A8EE1 /* BebasNeue Thin.otf */; };
 		469A5D2307C3040851744B08 /* Pods_Coach_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +97,13 @@
 		2CEF358C1D510B5400C5D47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF8E0E21D5516A30042EF8B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		2CF8E0E41D55505D0042EF8B /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		2CFA10E21D651578004A8EE1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2CFA10E41D666397004A8EE1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2CFA10EA1D694E8D004A8EE1 /* BebasNeue Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.otf"; sourceTree = "<group>"; };
+		2CFA10EB1D694E8D004A8EE1 /* BebasNeue Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Book.otf"; sourceTree = "<group>"; };
+		2CFA10EC1D694E8D004A8EE1 /* BebasNeue Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.otf"; sourceTree = "<group>"; };
+		2CFA10ED1D694E8D004A8EE1 /* BebasNeue Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.otf"; sourceTree = "<group>"; };
+		2CFA10EE1D694E8D004A8EE1 /* BebasNeue Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.otf"; sourceTree = "<group>"; };
 		5CDAEEDE3F084C05DDF8F2B8 /* Pods-Coach Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.release.xcconfig"; sourceTree = "<group>"; };
 		D1FC0D75FB0F1FF7BD0F2392 /* Pods-Coach Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coach Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coach Assist/Pods-Coach Assist.debug.xcconfig"; sourceTree = "<group>"; };
 		D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coach_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +152,8 @@
 				2CF8E0E21D5516A30042EF8B /* Tools.swift */,
 				2C18F5CF1D5BA80000E4F895 /* RowerOrCoachViewController.swift */,
 				2CC40B551D5D237900FDBDBD /* AddToTeamViewController.swift */,
+				2CFA10E21D651578004A8EE1 /* LoginViewController.swift */,
+				2CFA10E41D666397004A8EE1 /* SignUpViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 				2C18F5E41D5BEFD700E4F895 /* TableViewControllers */,
 				2C18F5E51D5BF00D00E4F895 /* DisplaytableViewControllers */,
 				2C18F5E61D5BF03700E4F895 /* CellViewControllers */,
+				2CFA10E91D6949E2004A8EE1 /* Resources */,
 				2CEF35841D510B5400C5D47F /* Main.storyboard */,
 				2CEF35891D510B5400C5D47F /* LaunchScreen.storyboard */,
 				2CEF358C1D510B5400C5D47F /* Info.plist */,
@@ -219,6 +236,18 @@
 				D352D72A172C47AE6D32B9E9 /* Pods_Coach_Assist.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CFA10E91D6949E2004A8EE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CFA10EA1D694E8D004A8EE1 /* BebasNeue Bold.otf */,
+				2CFA10EB1D694E8D004A8EE1 /* BebasNeue Book.otf */,
+				2CFA10EC1D694E8D004A8EE1 /* BebasNeue Light.otf */,
+				2CFA10ED1D694E8D004A8EE1 /* BebasNeue Regular.otf */,
+				2CFA10EE1D694E8D004A8EE1 /* BebasNeue Thin.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B32A4F78FF6B60A4602A8936 /* Pods */ = {
@@ -295,8 +324,13 @@
 			files = (
 				2CEF358B1D510B5400C5D47F /* LaunchScreen.storyboard in Resources */,
 				2C232D5D1D540F64008548C8 /* Images.xcassets in Resources */,
+				2CFA10F31D694E8D004A8EE1 /* BebasNeue Thin.otf in Resources */,
+				2CFA10F01D694E8D004A8EE1 /* BebasNeue Book.otf in Resources */,
 				2CEF35881D510B5400C5D47F /* Assets.xcassets in Resources */,
+				2CFA10F11D694E8D004A8EE1 /* BebasNeue Light.otf in Resources */,
+				2CFA10EF1D694E8D004A8EE1 /* BebasNeue Bold.otf in Resources */,
 				2CEF35861D510B5400C5D47F /* Main.storyboard in Resources */,
+				2CFA10F21D694E8D004A8EE1 /* BebasNeue Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +402,7 @@
 				2C18F5C41D5AAAF500E4F895 /* DisplayRowerViewController.swift in Sources */,
 				2C232D511D53AD4E008548C8 /* RowerTableViewCell.swift in Sources */,
 				2C18F5CC1D5AAC4E00E4F895 /* ParseLoginHelper.swift in Sources */,
+				2CFA10E31D651578004A8EE1 /* LoginViewController.swift in Sources */,
 				2C18F5D01D5BA80000E4F895 /* RowerOrCoachViewController.swift in Sources */,
 				2C18F5DE1D5BC8FF00E4F895 /* Practice.swift in Sources */,
 				2C18F5CA1D5AAC4E00E4F895 /* ErrorHandling.swift in Sources */,
@@ -378,6 +413,7 @@
 				2C18F5CB1D5AAC4E00E4F895 /* ParseHelper.swift in Sources */,
 				2C18F5E01D5BD73200E4F895 /* InviteToTeam.swift in Sources */,
 				2CE5BD091D5D364800DDA457 /* TeamTableViewController.swift in Sources */,
+				2CFA10E51D666397004A8EE1 /* SignUpViewController.swift in Sources */,
 				2CF8E0E31D5516A40042EF8B /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

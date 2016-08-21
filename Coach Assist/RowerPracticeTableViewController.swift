@@ -18,6 +18,10 @@ class RowerPracticeTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func refresh(sender: AnyObject) {
+        viewDidLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         practices = []
@@ -25,7 +29,7 @@ class RowerPracticeTableViewController: UITableViewController {
         
         followingQuery.whereKey("toUser", equalTo:PFUser.currentUser()!)
         
-        followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
+        /*followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
             if let results = results {
                 let invitation = results.first as! InviteToTeam
                 let practiceQuery = PFQuery(className: "Practice")
@@ -43,15 +47,11 @@ class RowerPracticeTableViewController: UITableViewController {
             }
             self.tableView.reloadData()
             
-        }
+        }*/
         //  rowers = RealmHelper.retrieveRower()
     }
     override func viewDidAppear(animated: Bool) {
-        if counter != 0{
-            practices = []
-            viewDidLoad()
-        }
-        counter += 1
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,39 +67,49 @@ class RowerPracticeTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return practices.count
+        if practices.count > 0 {
+            return practices.count
+        } else {
+            return 0
+        }
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
         let cell = tableView.dequeueReusableCellWithIdentifier("RowerPracticeTableViewCell", forIndexPath: indexPath) as! RowerPracticeTableViewCell
+         if practices.count > 0 {
         
-        //        let cellIdentifier = "RowerTableViewCell"
-        let practice = practices[indexPath.row]
-        // 3
-        if let date = practice.practiceDate{
-            if let time = practice.time {
-                cell.timeAndDate.text = "\(date) at \(time)"
+            //        let cellIdentifier = "RowerTableViewCell"
+            let practice = practices[indexPath.row]
+            // 3
+            if let date = practice.practiceDate{
+                if let time = practice.time {
+                    cell.timeAndDate.text = "\(date) at \(time)"
+                } else {
+                    let formatter = NSDateFormatter()
+                    formatter.dateStyle = NSDateFormatterStyle.LongStyle
+                    formatter.timeStyle = .ShortStyle
+                    
+                    let dateString = formatter.stringFromDate(date)
+                    cell.timeAndDate.text = "\(dateString)"
+
+                }
             } else {
-                let formatter = NSDateFormatter()
-                formatter.dateStyle = NSDateFormatterStyle.LongStyle
-                formatter.timeStyle = .ShortStyle
-                
-                let dateString = formatter.stringFromDate(date)
-                cell.timeAndDate.text = "\(dateString)"
-
+                cell.timeAndDate.text = ""
             }
-        } else {
-            cell.timeAndDate.text = ""
-        }
-        if let location = practice.location{
-            cell.location.text = "\(location)"
-        } else {
-            cell.location.text = ""
-        }
+            if let location = practice.location{
+                cell.location.text = "\(location)"
+            } else {
+                cell.location.text = ""
+            }
 
-        // Configure the cell...
-        
+            // Configure the cell...
+         } else {
+            var alert = UIAlertView(title: "Invalid", message: "Password must be greater than 2 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+
+        }
         return cell
     }
     
@@ -128,5 +138,12 @@ class RowerPracticeTableViewController: UITableViewController {
         
     }
 
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
+        })
+    }
 
 }

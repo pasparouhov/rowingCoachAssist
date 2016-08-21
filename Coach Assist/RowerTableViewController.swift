@@ -9,9 +9,14 @@
 import UIKit
 import RealmSwift
 import Parse
+import FBSDKCoreKit
+import ParseUI
+import ParseFacebookUtilsV4
 
 class RowerTableViewController: UITableViewController {
+    var parseLoginHelper: ParseLoginHelper!
     var counter = 0
+    var window: UIWindow?
     var rowers: [Rower] = []   {
         didSet {
             tableView.reloadData()
@@ -23,6 +28,7 @@ class RowerTableViewController: UITableViewController {
         rowers = []
         let followingQuery = PFQuery(className: "Rower")
         followingQuery.whereKey("coachName", equalTo:PFUser.currentUser()!)
+        followingQuery.orderByAscending("username")
         followingQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) in
             if let result = results {
                 for object in result{
@@ -171,4 +177,11 @@ class RowerTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
+        })
+    }
 }
